@@ -21,6 +21,12 @@ try:
 except ImportError:
     print("SeleniumURLLoader is not installed.")
 
+try:
+    import unstructured
+    print("unstructured is installed.")
+except ImportError:
+    print("unstructured is not installed.")
     
+
  #source path/to/your/virtualenv/bin/activate
  #/Users/ming/anaconda3/bin/python
