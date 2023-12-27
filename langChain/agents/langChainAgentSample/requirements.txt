@@ -1,5 +1,6 @@
 
 openai
+openllm
 langchain
 bs4
 python-dotenv

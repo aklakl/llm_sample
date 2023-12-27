@@ -1,6 +1,5 @@
-# LangChain Sample Project 
-resource from [https://python.langchain.com/docs/get_started/introduction](# LangChain)
-
+# LLM Sample Project 
+LangChain resource from [https://python.langchain.com/docs/get_started/introduction](# LangChain)
 
 
 ## Overview
