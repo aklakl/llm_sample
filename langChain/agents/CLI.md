@@ -25,3 +25,11 @@ python3 searchGoogle.py
 * selfAskWithSearch
 python3 selfAskWithSearch/selfAskWithSearch.py
 
+* Testing bash shell
+curl http://192.168.0.232:3000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+     "model": "facebook--opt-1.3b",
+     "messages": [{"role": "user", "content": "Say this is a test!"}],
+     "temperature": 0.7
+   }'
