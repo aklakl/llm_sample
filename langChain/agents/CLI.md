@@ -33,3 +33,13 @@ curl http://192.168.0.232:3000/v1/chat/completions \
      "messages": [{"role": "user", "content": "Say this is a test!"}],
      "temperature": 0.7
    }'
+* OpenAI and Local access URL
+http://192.168.0.232:1234/v1/models
+http://192.168.0.232:1234/metrics
+
+http://192.168.0.232:3000/metrics
+http://192.168.0.232:3000/v1/models
+
+http://localhost:3000/metrics
+http://localhost:3000/v1/models
+https://api.openai.com/v1/models
