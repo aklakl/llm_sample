@@ -3,6 +3,10 @@
 #original google AI: https://ai.google.dev/tutorials/python_quickstart?hl=en
 
 import os
+from openai import OpenAI
+# from langchain.llms import OpenAI
+# based on openAI version is higher than 1.0.0[pip install openai==1.6.1]
+# python3 localLLM/testOpenAI.py
 from langchain_google_genai import GoogleGenerativeAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import AgentType, Tool, initialize_agent
@@ -13,9 +17,9 @@ from langchain.tools import DuckDuckGoSearchRun
 from langchain.tools import DuckDuckGoSearchResults
 # Do this so we can see exactly what's going on under the hood
 from langchain.globals import set_debug
+from langchain.globals import set_verbose
 from getpass import getpass
 
-set_debug(True)
 
 if "GOOGLE_API_KEY" not in os.environ:
     os.environ["GOOGLE_API_KEY"] = getpass.getpass("Provide your Google API Key")
@@ -47,6 +51,11 @@ print("OPENAI_API_KEY=>", openai_api_key)
 serpapi_api_key = os.environ["SERPAPI_API_KEY"] #
 print("SERPAPI_API_KEY=>", serpapi_api_key)
 
+#for debuging refer:https://python.langchain.com/docs/guides/debugging
+set_debug(True)
+set_verbose(True)
+print("==============================================Completed the setup env=========================")
+
 #==============================================Completed the setup env=========================
 
 
@@ -61,14 +70,36 @@ print("SERPAPI_API_KEY=>", serpapi_api_key)
 # print("ChatGoogleGenerativeAI.result=>", result)
 
 
-# Initialize the OpenAI language model
-# Replace <your_api_key> in openai_api_key="<your_api_key>" with your actual OpenAI key.
-# llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613")
+# Initialize  local OpenAI-LLM language model with LM Studio built server
+base_url = os.environ.get("TEST_API_BASE_URL", "http://192.168.0.232:1234/v1")     #This is working as well for LM Studio server
+api_key = os.environ.get("OPENAI_API_KEY", "xxxxxxxxx")   # even your local don't use the authorization, but you need to fill something, otherwise will be get exception.
+api_key = "xxxx"
+openAI_client = OpenAI(
+    base_url = base_url,
+    # This is the default and can be omitted
+    api_key=api_key,
 
-## my own LLM API refer:https://python.langchain.com/docs/integrations/llms/openllm
-# server_url = "http://localhost:3000"  # Replace with remote host if you are running on a remote server
-server_url = "http://192.168.0.232:1234"  # Replace with remote host if you are running on a remote server
-llm = OpenLLM(server_url=server_url)
+)
+#    _strict_response_validation=False,
+messages = [{"role": "user", "content": "hi"}]
+#model = "/Users/sl6723/.cache/lm-studio/models/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf"
+model = "facebook--opt-1.3b"
+chat_completion=openAI_client.chat.completions.create(
+    messages=messages, 
+    model=model, # this field is currently unused
+    stream=False,
+)
+print(chat_completion.choices[0].message.model_dump())
+
+
+'''
+# ## my own LLM API refer:https://python.langchain.com/docs/integrations/llms/openllm
+# # server_url = "http://localhost:3000"  # Replace with remote host if you are running on a remote server
+# server_url = "http://192.168.0.232:1234"  # Replace with remote host if you are running on a remote server
+# llm = OpenLLM(server_url=server_url)
+
+
+
 
 # Initialize the general search API for search functionality
 # Replace <your_api_key> in serpapi_api_key="<your_api_key>" with your actual SerpAPI key.
@@ -84,6 +115,7 @@ tools = [
         description="Useful when you need to answer questions about current events. You should ask targeted questions.",
     ),
 ]
+llm=openAI_client
 #To make sure that our agent doesn’t get stuck in excessively long loops, we can set max_iterations. We can also set an early stopping method, which will determine our agent’s behavior once the number of max iterations is hit. By default, the early stopping uses method force which just returns that constant string. Alternatively, you could specify method generate which then does one FINAL pass through the LLM to generate an output.
 agent_executor = initialize_agent(
     tools,
@@ -105,3 +137,5 @@ agent_executor.invoke(
     }
 )
 #==============================================exact logic code=========================
+
+'''

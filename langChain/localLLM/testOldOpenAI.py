@@ -4,13 +4,6 @@ import os
 import openai
 # based on openAI version is less than 1.0.0[pip install openai==0.28]
 # python3 localLLM/testOldOpenAI.py
-from langchain.adapters import openai as lc_openai
-from langchain.agents import AgentType, Tool, initialize_agent
-from langchain.llms import OpenLLM
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
-from langchain.tools import DuckDuckGoSearchRun
-from langchain.tools import DuckDuckGoSearchResults
 # Do this so we can see exactly what's going on under the hood
 from langchain.globals import set_debug
 from langchain.globals import set_verbose
