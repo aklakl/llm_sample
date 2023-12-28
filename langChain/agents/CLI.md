@@ -6,6 +6,7 @@ conda info --env
 pip install langchain==0.0.352
 pip show langchain
 !pip install openai openllm google-search-results langchain langchain-google-genai beautifulsoup4
+pip install -r requirements.txt
 
 
 * Other command
