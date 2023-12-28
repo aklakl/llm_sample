@@ -1,0 +1,5 @@
+#Requirements File Format refer:https://pip.pypa.io/en/stable/reference/requirements-file-format/
+openai
+openllm
+langchain
+langchain-google-genai

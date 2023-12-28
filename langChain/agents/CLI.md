@@ -8,7 +8,13 @@ pip show langchain
 
 * Other command
 python3 testming/multipleAgentsDemo.py
-python3.11 testming/testOpenLLM.py
+
+* localLLM
+python3.11 localLLM/testOpenLLM.py
+python3 localLLM/openAI_example.py
+python3 localLLM/testOldOpenAI.py
+python3 localLLM/testOpenAI.py
+
 
 python3 searchAPI.py
 python3 searchBaidu.py
