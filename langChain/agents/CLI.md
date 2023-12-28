@@ -1,6 +1,8 @@
 * multipleAgentsDemo Command
-conda create --name minglocalenv python=3.11
-conda activate minglocalenv
+conda create --name minglocalenv3.9 python=3.9
+conda activate minglocalenv3.9
+conda deactivate
+conda info --env
 pip install langchain==0.0.352
 pip show langchain
 !pip install openai openllm google-search-results langchain langchain-google-genai beautifulsoup4

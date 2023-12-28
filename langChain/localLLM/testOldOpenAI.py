@@ -1,7 +1,4 @@
-#refer：https://python.langchain.com/docs/integrations/llms/openllm
-#https://python.langchain.com/docs/integrations/providers/openllm
-#Understand OpenLLM => https://zhuanlan.zhihu.com/p/651130017
-#OpenLLM official github => https://github.com/bentoml/OpenLLM/blob/main/README.md
+#OpenAI python official github => https://github.com/openai/openai-python
 
 import os
 import openai
