@@ -4,11 +4,13 @@ node_modules/
 /.vs
 .vscode
 
+
 # Log files
 *.log
 
 # Python virtualenv
 .venv*
+pyautogen/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
