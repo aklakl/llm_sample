@@ -3,7 +3,7 @@ from autogen import AssistantAgent, UserProxyAgent, oai
 
 config_list = [
     {"model":"palm/chat-bison",
-    "api_base":"https://endpoint.com",
+    "api_base":"https://airedale-native-chicken.ngrok-free.app",
     "api_type":"open_ai"
     "api_version"
     }
