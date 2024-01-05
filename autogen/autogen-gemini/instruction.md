@@ -18,8 +18,8 @@ source pyautogen/bin/activate
 pip install pyautogen google-generativeai
 pip install -q google-generativeai
 
-python autogen/autogen-gemini/autogen-gemini.py
-
+python autogen/autogen-gemini/autogen_gemini.py
+python autogen/
 
 ```
 
