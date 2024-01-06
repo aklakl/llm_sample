@@ -6,7 +6,7 @@ Google Gemini API=>https://cloud.google.com/vertex-ai/docs/generative-ai/multimo
 
 ### Running Locally
 
-1. Go to Google colab Start the ngrok mapping litellm server and => https://colab.research.google.com/drive/1NutSWRS4UR38vasK_Y3MTW1Z0AzIOFmE?usp=sharing
+1. Go to Google colab Start the ngrok mapping litellm server. => https://colab.research.google.com/drive/1NutSWRS4UR38vasK_Y3MTW1Z0AzIOFmE?usp=sharing
 
   
 2. Run your code local machine:
@@ -19,7 +19,7 @@ pip install pyautogen google-generativeai
 pip install -q google-generativeai
 
 python autogen/autogen-gemini/autogen_gemini.py
-python autogen/
+
 
 ```
 
