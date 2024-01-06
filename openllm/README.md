@@ -1,6 +1,6 @@
 # Sample to use openLLM
-Docs refer:https://pypi.org/project/openllm/
-Offical github=>https://github.com/bentoml/OpenLLM
+OpenLLM Docs refer:https://pypi.org/project/openllm/
+OpenLLM Offical github=>https://github.com/bentoml/OpenLLM
 
 
 ## openllm Python style
@@ -26,5 +26,6 @@ bentoml models list
 ### XXX
 
 ### Notes
-# Sidan's computer token=>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
-
+```
+Sidan's computer token=>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
+```
