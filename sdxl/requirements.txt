@@ -3,3 +3,5 @@ diffusers
 transformers
 accelerate
 omegaconf
+googletrans==3.1.0a0 
+numba
