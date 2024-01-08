@@ -54,9 +54,12 @@ def run_sdxl_turbo_pipeline_image2image():
             pipeline = AutoPipelineForImage2Image.from_pipe(pipeline_text2image).to("cuda")     
         else:
             pipeline = AutoPipelineForImage2Image.from_pipe(pipeline_text2image)
-
-        print("==========000==============")
-        init_image = load_image("https://oss.feidee.net/oss//group_oss_trans3_f9651cb59a6ee921_1597X1276.jpg")
+        
+        # This image_url is not supporting PIL, that's the base64 formatting   with "data:image/x-icon;base64,"
+        image_url = "https://oss.feidee.net/oss//group_oss_trans3_f9651cb59a6ee921_1597X1276.jpg"
+        # This is fitting PIL formatting 
+        image_url = "https://s3.amazonaws.com/formaloo-en/f/uploads/ur/89cd8be71d781d86/fm/NriKaD2r/b1339f6c-6e02-4755-a172-9080b8625bdb.jpg"
+        init_image = load_image(image_url)
         init_image = init_image.resize((1597, 1276))
         prompt = "Enhance the cuteness of this portrait, please."
         image = pipeline(prompt, image=init_image, strength=0.5, guidance_scale=0.0, num_inference_steps=2).images[0]
@@ -68,8 +71,29 @@ def run_sdxl_turbo_pipeline_image2image():
     except Exception as e:
         print(f"""run_sdxl_turbo_pipeline_image2image failed with Exception{e}. \n""")    
 
+def run_sdxl_turbo_googletrans_text2image():
+    if gpu==True:
+        #This is for cuda GPU
+        pipeline_text2image = AutoPipelineForText2Image.from_pretrained("stabilityai/sdxl-turbo", torch_dtype=torch.float16, variant="fp16").to("cuda")
+    else:
+        #This is for cpu
+        pipeline_text2image = AutoPipelineForText2Image.from_pretrained("stabilityai/sdxl-turbo")
+    # @title Generation
+    Prompt = "cute dogs" # @param {type:"string"}
+    Steps = 1 # @param {type:"number"}
 
-
+    from googletrans import Translator, constants
+    from pprint import pprint
+    translator = Translator()
+    translation = translator.translate(Prompt)
+    PromptEN = translation.text
+    prompt = PromptEN
+    if gpu==False:
+        image = pipeline_text2image(prompt=PromptEN, num_inference_steps=1, guidance_scale=0.0).images[0]
+    else:
+        image = pipeline_text2image(prompt=PromptEN, num_inference_steps=Steps, guidance_scale=0.0).images[0]
+    res_image = image.save("./images/image2image.jpg") 
+    print("==========Completed run_sdxl_turbo_googletrans_text2image ==============")
 
 #running
 if __name__ == "__main__":
