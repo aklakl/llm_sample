@@ -13,8 +13,8 @@ import openai
 #Custom configurations
 #base_url = "http://localhost:1234/v1"  # You can specify API base URLs if needed. eg: localhost:8000
 #http://10.9.150.174:1234/v1/models
-#base_url = "http:// 10.16.97.15:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
-base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only supput SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
+base_url = "http://192.168.40.229:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
+#base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only supput SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
 api_type = "openai"  # Type of API, e.g., "openai" or "aoai".
 api_version = None  # Specify API version if needed.
 #api_model= "palm/chat-biso"
@@ -119,7 +119,9 @@ pip install openai==0.28  pyautogen==0.1.14
 '''
 def run_autogen_with_twoagent_pyautogen_latest_version():
     try:
-        #
+        #Base on openai==0.28  pyautogen==0.1.14 ,If you want to use your own LLM,you must be override your openai.api_base and openai.api_key for autogen, otherwise won't be work.
+        openai.api_key = api_key  # supply your API key however you choose
+        openai.api_base= base_url # supply your api base URL If you have your own LLM
         assistant = AssistantAgent("assistant", llm_config={"api_key":api_key,"base_url": base_url,"api_model":api_model})
         user_proxy = UserProxyAgent("user_proxy", code_execution_config={"work_dir": "coding"})
         #user_proxy.initiate_chat(assistant, message="Show me the YTD gain of 10 largest technology companies as of today.")
@@ -128,6 +130,7 @@ def run_autogen_with_twoagent_pyautogen_latest_version():
     except Exception as e:
         print(f"""run_autogen_with_twoagent_pyautogen_latest_version failed with Exception{e}. \n""")   
 # ##====================================================
+
 
 
 #
