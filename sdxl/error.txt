@@ -1,6 +1,11 @@
 
 
 
+#Local get error[PS:Seems like this is a Pillow (PIL format)  refer:https://huggingface.co/docs/diffusers/api/utilities#diffusers.utils.load_image
+
+run_sdxl_turbo_pipeline_image2image failed with Exceptioncannot identify image file <_io.BytesIO object at 0x168aadbc0>.
+
+
 
 #Local get error.(PS:Seems like the M2 max macbook pro SN=YK0W44NPWP doesn't support cuda.A Mac with an M2 doesn't have a CUDA-capable GPU. However, you can use MPS acceleration: torch)
 Traceback (most recent call last):ensors:  58%|████████████████████████████████▋                       | 3.00G/5.14G [02:45<02:17, 15.5MB/s]
