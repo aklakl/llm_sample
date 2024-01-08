@@ -1,0 +1,27 @@
+
+
+
+
+#Local get error.(PS:Seems like the M2 max macbook pro SN=YK0W44NPWP doesn't support cuda.A Mac with an M2 doesn't have a CUDA-capable GPU. However, you can use MPS acceleration: torch)
+Traceback (most recent call last):ensors:  58%|████████████████████████████████▋                       | 3.00G/5.14G [02:45<02:17, 15.5MB/s]
+  File "/Users/sl6723/Documents/Ming/process/test_sdxl/test_sdxl.py", line 5, in <module>██████████████| 5.14G/5.14G [04:00<00:00, 29.6MB/s]
+    source sdxl/bin/activate
+                          ^^^
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/diffusers/pipelines/pipeline_utils.py", line 869, in to
+    module.to(device, dtype)
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sl6723/Documents/Ming/process/sdxl/lib/python3.11/site-packages/torch/cuda/__init__.py", line 289, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
