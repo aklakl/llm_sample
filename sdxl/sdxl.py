@@ -4,8 +4,10 @@
 python3.11 -m venv sdxl
 source sdxl/bin/activate
 # deactivate
+#pip install -q diffusers transformers accelerate omegaconf
+pip install -r requirements.txt
 
-pip install -q diffusers transformers accelerate omegaconf
+
 '''
 from diffusers import AutoPipelineForText2Image
 import torch
