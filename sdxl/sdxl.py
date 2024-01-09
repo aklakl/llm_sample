@@ -47,29 +47,31 @@ def run_sdxl_turbo_pipeline_text2image():
         ) 
 
 def run_sdxl_turbo_pipeline_image2image():
-    try:
+    # try:
         # use from_pipe to avoid consuming additional memory when loading a checkpoint
-        pipeline_text2image = AutoPipelineForText2Image.from_pretrained("stabilityai/sdxl-turbo", torch_dtype=torch.float16, variant="fp16")
+       
         if gpu==True:
+            pipeline_text2image = AutoPipelineForText2Image.from_pretrained("stabilityai/sdxl-turbo", torch_dtype=torch.float16, variant="fp16").to("cuda")     
             pipeline = AutoPipelineForImage2Image.from_pipe(pipeline_text2image).to("cuda")     
         else:
+            pipeline_text2image = AutoPipelineForText2Image.from_pretrained("stabilityai/sdxl-turbo")
             pipeline = AutoPipelineForImage2Image.from_pipe(pipeline_text2image)
         
         # This image_url is not supporting PIL, that's the base64 formatting   with "data:image/x-icon;base64,"
-        image_url = "https://oss.feidee.net/oss//group_oss_trans3_f9651cb59a6ee921_1597X1276.jpg"
+        # image_url = "https://oss.feidee.net/oss//group_oss_trans3_f9651cb59a6ee921_1597X1276.jpg"
         # This is fitting PIL formatting 
         image_url = "https://s3.amazonaws.com/formaloo-en/f/uploads/ur/89cd8be71d781d86/fm/NriKaD2r/b1339f6c-6e02-4755-a172-9080b8625bdb.jpg"
         init_image = load_image(image_url)
         init_image = init_image.resize((1597, 1276))
         prompt = "Enhance the cuteness of this portrait, please."
         image = pipeline(prompt, image=init_image, strength=0.5, guidance_scale=0.0, num_inference_steps=2).images[0]
-        print("==========1111==============")
+        print(image)
+        #image.images[0]
         make_image_grid([init_image, image], rows=1, cols=2)
-        print("==========2222==============")
-        res_image = image.save("./images/image2image.jpg") 
+        #res_image = image.save("./images/image2image.jpg") 
         print("==========Completed run_sdxl_turbo_pipeline_image2image==============")
-    except Exception as e:
-        print(f"""run_sdxl_turbo_pipeline_image2image failed with Exception{e}. \n""")    
+    # except Exception as e:
+    #     print(f"""run_sdxl_turbo_pipeline_image2image failed with Exception{e}. \n""")    
 
 def run_sdxl_turbo_googletrans_text2image():
     if gpu==True:
