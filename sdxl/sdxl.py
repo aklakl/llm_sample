@@ -63,12 +63,14 @@ def run_sdxl_turbo_pipeline_image2image():
         image_url = "https://s3.amazonaws.com/formaloo-en/f/uploads/ur/89cd8be71d781d86/fm/NriKaD2r/b1339f6c-6e02-4755-a172-9080b8625bdb.jpg"
         init_image = load_image(image_url)
         init_image = init_image.resize((1597, 1276))
-        prompt = "Enhance the cuteness of this portrait, please."
+        #prompt = "Enhance the cuteness of this portrait, please."
+        prompt = "Chage the backgroup with outdoor,won't be change portrait"
+        prompt = ""
         image = pipeline(prompt, image=init_image, strength=0.5, guidance_scale=0.0, num_inference_steps=2).images[0]
         print(image)
         #image.images[0]
         make_image_grid([init_image, image], rows=1, cols=2)
-        #res_image = image.save("./images/image2image.jpg") 
+        res_image = image.save("./images/image2image4.jpg") 
         print("==========Completed run_sdxl_turbo_pipeline_image2image==============")
     # except Exception as e:
     #     print(f"""run_sdxl_turbo_pipeline_image2image failed with Exception{e}. \n""")    
