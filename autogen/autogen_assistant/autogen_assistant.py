@@ -14,7 +14,7 @@ import openai
 #base_url = "http://localhost:1234/v1"  # You can specify API base URLs if needed. eg: localhost:8000
 #http://10.9.150.174:1234/v1/models
 base_url = "http://192.168.40.229:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
-#base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only supput SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
+#base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
 api_type = "openai"  # Type of API, e.g., "openai" or "aoai".
 api_version = None  # Specify API version if needed.
 #api_model= "palm/chat-biso"

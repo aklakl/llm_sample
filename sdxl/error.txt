@@ -2,7 +2,6 @@
 
 
 #Local get error[PS:Seems like this is a Pillow (PIL format)  refer:https://huggingface.co/docs/diffusers/api/utilities#diffusers.utils.load_image
-
 run_sdxl_turbo_pipeline_image2image failed with Exceptioncannot identify image file <_io.BytesIO object at 0x168aadbc0>.
 
 

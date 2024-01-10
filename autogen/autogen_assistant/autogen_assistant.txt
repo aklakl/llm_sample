@@ -1,0 +1,130 @@
+* checkout from https://github.com/microsoft/autogen/tree/main/test  move the sample to main/test folder
+
+
+
+
+* Please override the openai based on pip install openai==0.28  pyautogen==0.1.14 
+        #openai.api_key = api_key  # supply your API key however you choose
+        #openai.api_base= base_url # supply your api base URL If you have your own LLM
+#===============================get error==========================
+openai.error.APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1b41cf38f0>: Failed to resolve 'api.openai.com' ([Errno -2] Name or service not known)"))
+[autogen.oai.completion: 01-06 19:55:59] {230} INFO - retrying in 10 seconds...
+Traceback (most recent call last):
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connection.py", line 210, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x7f1b41dc00e0>: Failed to resolve 'api.openai.com' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1b41dc00e0>: Failed to resolve 'api.openai.com' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_requestor.py", line 596, in request_raw
+    result = _thread_context.session.request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1b41dc00e0>: Failed to resolve 'api.openai.com' ([Errno -2] Name or service not known)"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/oai/completion.py", line 224, in _get_response
+    response = openai_completion.create(request_timeout=request_timeout, **config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_requestor.py", line 288, in request
+    result = self.request_raw(
+             ^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_requestor.py", line 609, in request_raw
+    raise error.APIConnectionError(
+openai.error.APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f1b41dc00e0>: Failed to resolve 'api.openai.com' ([Errno -2] Name or service not known)"))
+^Z
+[9]+  Stopped                 python autogen/autogen_assistant/autogen_assistant.py
+(pyautogen) root@1cfeec487615:/home/tmp/mingwork/llm_sample# 
+
+
+
+
+
+
+
+
+** got error 
+#===============================get error==========================
+
+Traceback (most recent call last):
+  File "/Users/ming/Documents/work/repo/autogen/test/ming.py", line 62, in <module>
+    user_proxy.initiate_chat(assistant, message="Plot a chart of NVDA and TESLA stock price change YTD.")
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/autogen/agentchat/conversable_agent.py", line 550, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/autogen/agentchat/conversable_agent.py", line 348, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/autogen/agentchat/conversable_agent.py", line 481, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/autogen/agentchat/conversable_agent.py", line 906, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/autogen/agentchat/conversable_agent.py", line 628, in generate_oai_reply
+    return True, client.extract_text_or_function_call(response)[0]
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/autogen/oai/client.py", line 343, in extract_text_or_function_call
+    return [
+TypeError: 'NoneType' object is not iterable
+
+
+========
+
