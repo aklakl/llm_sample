@@ -1,0 +1,4 @@
+#Requirements File Format refer:https://pip.pypa.io/en/stable/reference/requirements-file-format/
+openai==0.28
+pyautogen==0.1.14 
+autogenra

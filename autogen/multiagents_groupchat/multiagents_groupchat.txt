@@ -3,9 +3,88 @@
 
 
 
+
+
+
+
+* Because  conversable_agent(autogen.oai.llm_config have not accept the supper class's llm_config)
+This issue come from here
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 606, in generate_oai_reply
+    response = oai.ChatCompletion.create(
+
+#Code like this=>      
+```
+        #llm_config = {'model': "TinyLlama--TinyLlama-1.1B-Chat-v1.0"}
+        # print("====================>")
+        # print("llm_config=>",llm_config)
+        # print("====================>")
+```
+#===============================get error==========================
+mingtest========> False 404
+mingtest2========> message
+mingtest2========> type
+mingtest2========> object
+mingtest2========> param
+mingtest2========> code
+mingtest2========> {'message': "Model 'gpt-4' does not exists. Try 'GET /v1/models' to see available models.\nTip: If you are migrating from OpenAI, make sure to update your 'model' parameters in the request.", 'type': 'invalid_request_error', 'object': 'error', 'param': None, 'code': '404'}
+Traceback (most recent call last):
+  File "/home/tmp/mingwork/llm_sample/autogen/multiagents_groupchat/multiagents_groupchat.py", line 107, in <module>
+    run_agentchat_multiagents_groupchat()
+  File "/home/tmp/mingwork/llm_sample/autogen/multiagents_groupchat/multiagents_groupchat.py", line 72, in run_agentchat_multiagents_groupchat
+    user_proxy.initiate_chat(
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 531, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 334, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 462, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 781, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/groupchat.py", line 162, in run_chat
+    speaker = groupchat.select_speaker(speaker, self)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/groupchat.py", line 91, in select_speaker
+    final, name = selector.generate_oai_reply(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 606, in generate_oai_reply
+    response = oai.ChatCompletion.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/oai/completion.py", line 834, in create
+    return cls._get_response(params, raise_on_ratelimit_or_timeout=raise_on_ratelimit_or_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/autogen/oai/completion.py", line 224, in _get_response
+    response = openai_completion.create(request_timeout=request_timeout, **config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_requestor.py", line 710, in _interpret_response
+    self._interpret_response_line(
+  File "/home/tmp/mingwork/llm_sample/pyautogen/lib/python3.12/site-packages/openai/api_requestor.py", line 776, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Model 'gpt-4' does not exists. Try 'GET /v1/models' to see available models.
+Tip: If you are migrating from OpenAI, make sure to update your 'model' parameters in the request.
+
+
+
+
+
+
+
+
+
+
 * Fixed by adding params "default_auto_reply" in autogen.UserProxyAgent
 default_auto_reply="Sorry, I couldn't process that request.",  # Set a default auto-reply message here, refer:https://github.com/microsoft/autogen/issues/279#issuecomment-1783656203
-
+When you facing Error [ 'messages' array must only contain objects with a 'content' field that is not empty.] That's a similar issue. The Agent send an empty message, LM Studio api dont like it.
 #===============================get error==========================
 (pyautogen) root@1cfeec487615:/home/tmp/mingwork/llm_sample# python autogen/multiagents_groupchat/multiagents_groupchat.py
 user_proxy (to chat_manager):

@@ -50,3 +50,39 @@ http://localhost:3000/metrics
 http://localhost:3000/v1/models
 https://api.openai.com/v1/models
 
+
+
+=============================
+docker pull python
+docker image ls
+sudo docker container prune
+sudo docker image prune 
+#for ubuntu
+docker exec -it 1cfeec487615 /bin/bash
+#for debian
+docker exec -it 1cfeec487615 /usr/bin/bash
+
+#Mapping window path refer:https://blog.51cto.com/u_16175478/8023989
+docker run -itd --name ming_llm3 -v D:\work\repo:/home python:latest
+
+
+
+docker run -d -it -p 22:22 --name ming_llm python:latest   
+#docker run -v ./host/relative/path:/container/path
+docker run --name ming_llm3 python:latest -v D:\work\repo:/home -itd  
+docker run python:latest -v D:\work\repo:/home -itd
+
+docker exec -itd  0c50843e44b4 /usr/bin/bash -p 22:22 python:latest -v D:\work\repo:/home/ming/  
+
+
+
+#How to Create a Docker Image From a Container refer:https://www.dataset.com/blog/create-docker-image/
+#First convert your container to the docker images use => docker commit $YOUR_container_name
+docker commit ming_llm3
+
+#Retag you just commited the images_id to a real name(Optional)
+docker tag $YOUR_container_name mingli512/ming_llm:latest
+
+#Push your docker image to docker hub ($docker_hub_account_name/$project_name:$tagname)=> docker push [OPTIONS] NAME[:TAG]  please refer:https://docs.docker.com/engine/reference/commandline/push/
+docker push mingli512/ming_llm:latest
+=============================
