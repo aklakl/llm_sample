@@ -10,15 +10,10 @@ refer:https://youtu.be/6jl0Cux3tUU
 Or use LM Studio build your local LLM => https://lmstudio.ai/
 
 
-2. Run your code local machine:
-```
-python3.12 -m venv autogptenv
-source autogptenv/bin/activate
-# deactivate
-pip install openai==1.6.1 pyautogen==0.2.3 
-pip show openai
+2. Setup agentgpt in your local machine follow => https://docs.reworkd.ai/development/setup
 
-python autogen/multiagents_groupchat/multiagents_groupchat.py
+```
+
 
 ```
 
