@@ -1,9 +1,22 @@
 * Ming's CLI
+
+
+* Common customized base_url
 ```
 base_url = "http://192.168.40.229:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
 base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  
 
 ```
+
+* Common customized model
+```
+Ollama run saikatkumardey/tinyllama   around 903MB => refer：https://ollama.ai/saikatkumardey/tinyllama 
+Huggingface tinyllamas  around 438 MB => https://huggingface.co/karpathy/tinyllamas/tree/main
+Ming's Postman to test the general openAI API with local LLM => https://documenter.getpostman.com/view/3199697/2s9YsNdAEC
+LiteLLM-huggingface use default=huggingface/bigcode/starcoder    (PS:Required HF_TOKEN,otherwise will has limitation   model=>huggingface/bigcode/starcoder   max_tokens=192  top_p=[0.0~0.9]  )
+```
+
+
 
 
 * Testing bash shell
