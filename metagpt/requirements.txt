@@ -1,0 +1,6 @@
+#Requirements File Format refer:https://pip.pypa.io/en/stable/reference/requirements-file-format/
+openai
+metagpt
+duckduckgo-search
+langchain
+langchain-google-genai

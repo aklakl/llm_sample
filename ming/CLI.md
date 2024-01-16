@@ -1,5 +1,8 @@
 * Ming's CLI
 
+### Coding Style Guide
+In general, we adhere to [Google Python style guide](https://google.github.io/styleguide/pyguide.html).
+
 
 * Common customized base_url
 ```
@@ -27,7 +30,11 @@ LinguaMatic-Tiny-GGUF (Around 483MB~904MB) => https://huggingface.co/erfanzar/Li
 Tiny-Vicuna-1B-GGUF (around 482MB~1.17G) => https://huggingface.co/afrideva/Tiny-Vicuna-1B-GGUF
 TinyLlama-1.1B-Chat-v0.3-GGUF(around 482MB~1.17G)  => https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF   (Huggingface-API https://huggingface.co/api/models/TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF/   TinyLlama introduction=>https://youtu.be/T5l228844NI)
 TinyLlama-1.1B-1T-OpenOrca-GGUF(around 482MB~1.17G) => https://huggingface.co/TheBloke/TinyLlama-1.1B-1T-OpenOrca-GGUF
+Offical TinyLlama (ggml-model-q4_0.gguf 637 MB）=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v0.2-GGUF
+Offical code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-python-v0.1
 Huggingface tinyllamas  （bin file style around 438 MB） => https://huggingface.co/karpathy/tinyllamas
+
+
 
 
 
@@ -139,8 +146,8 @@ tail -f /private/tmp/lmstudio-server-log.txt
 docker pull python
 docker pull ubuntu
 
-sudo apt update
-sudo apt install net-tools curl telnet vim python3
+sudo apt update && apt install net-tools curl telnet vim python3
+apt-get update && apt-get install -y procps && rm -rf /var/lib/apt/lists/*
 curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok
 
 ngrok config add-authtoken $Your_token
