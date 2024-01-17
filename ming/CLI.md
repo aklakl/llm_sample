@@ -21,7 +21,7 @@ Ollama run saikatkumardey/tinyllama   (Ollama model around 903MB) => refer：htt
 
 
 
-ALL the Tiny models(Most model come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
+ALL the Tiny models for testing and simple task (Most model come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
 Huggingface Tiny tinyllamas model gguf formating(around 1M refer:https://github.com/ggerganov/llama.cpp/issues/2708) => https://huggingface.co/klosax/tinyllamas-stories-gguf/blob/main/tinyllamas-stories-260k-f32.gguf
 LocalDocs text embeddings model Necessary for LocalDocs feature Used for retrieval augmented generation (RAG)[around 40MB] =>https://gpt4all.io/models/gguf/all-MiniLM-L6-v2-f16.gguf
 Huggingface =>https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
@@ -35,6 +35,12 @@ Offical code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggi
 Huggingface tinyllamas  （bin file style around 438 MB） => https://huggingface.co/karpathy/tinyllamas
 
 
+
+more than 4K content token 
+Yi-6B-200K content token (2.18 GB~9.94G)=>https://huggingface.co/01-ai/Yi-6B-200K
+yi-34b-200k-llamafied.Q2_K.gguf = 14.6 GB (around 14.6 GB~36.5 GB) =>https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF
+SG-Raccoon-Yi-200k model (around 23GB~45GB)[sg-raccoon-yi-200k-2.0.Q2_K.gguf=21.83 GiB(token content=200k)]=>https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF
+Mistral-7B-OpenOrca-GGUF-32k-token-content (around 3.08 GB~7.7GB)=>https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF
 
 
 

@@ -85,7 +85,7 @@ Or use LM Studio build your local LLM => https://lmstudio.ai/
    ```
 
 
-### Docker run
+### Running with Docker 
 
 To get started, follow these steps:
 
@@ -148,3 +148,16 @@ To get started, follow these steps:
 
 
    ```
+
+### Running based on Gemini API 
+
+To get started, follow these steps:
+
+1. **Clone the GitHub Repository:** 
+
+   ```
+   reflect  => https://github.com/OpenBMB/ChatDev/issues/313
+
+
+   ```
+
