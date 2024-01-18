@@ -79,6 +79,9 @@ openllm query 'What are large language models?'
 
 
 
+
+
+
 * OpenAI and Local access URL
 ```
 http://192.168.0.232:1234/v1/models
@@ -101,8 +104,7 @@ https://api.openai.com/v1/models
 ```
 docker pull python
 docker image ls
-sudo docker container prune
-sudo docker image prune 
+sudo docker container prune && docker image prune 
 #for ubuntu
 docker exec -it 1cfeec487615 /bin/bash
 #for debian
@@ -197,7 +199,7 @@ docker run -d -v /Users/sl6723/Documents/Ming:/home -p 80:80 --name ming_ollama 
 docker exec -it 3a5c5467c335 /bin/bash
 
 
-======deprescate=====
+======deprecated=====
 sudo docker run  --name ming_ollama2 -v /Users/sl6723/Documents/Ming/:/home python:latest -itd
 docker run --name ming_ollama5 python:latest -v /Users/sl6723/Documents/Ming/:/home -itd 
 docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:latest

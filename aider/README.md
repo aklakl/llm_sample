@@ -1,9 +1,9 @@
-# The code with MetaGPT
+# Aider is AI pair programming in your terminal
 ```
-MetaGPT github => https://github.com/geekan/MetaGPT
-MetaGPT Paper => https://arxiv.org/abs/2308.00352
-MetaGPT Installation =>https://docs.deepwisdom.ai/main/en/guide/get_started/installation.html#install-stable-version
-My Colab => https://colab.research.google.com/drive/1T-JFG_NXSK9cyPrYTFp1t1lXt681aQw8
+Aider  github => https://github.com/paul-gauthier/aider
+Ming's Colab within built the LLM for replacing your openai service API =>  https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_
+Universal Ctags Github => https://github.com/universal-ctags/ctags
+Simple video =>https://youtu.be/df8afeb1FY8
 
 ```
 
@@ -20,11 +20,11 @@ export OPENAI_API_BASE=http://airedale-native-chicken.ngrok-free.app/v1
 
 pip install -r requirements.txt --use-deprecated=legacy-resolver
 
-python3.12 -m venv metagptenv
-source metagptenv/bin/activate
+python3.12 -m venv aiderenv
+source aiderenv/bin/activate
 # deactivate
 
-python llm_sample/ming/metagptenv/
+python llm_sample/ming/aiderenv/
 
 
 
