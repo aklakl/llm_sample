@@ -1,0 +1,6 @@
+#This makefile for convert the 
+#refer:https://github.com/jmorganca/ollama?tab=readme-ov-file#import-from-gguf
+
+
+#Here to change your gguf model name
+FROM ./tinyllamas-stories-260k-f32.gguf

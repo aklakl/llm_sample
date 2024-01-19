@@ -1,0 +1,42 @@
+
+Error: open /home/sl6723/.ollama/models/blobs/sha256:3177739432-partial: disk quota exceeded
+ollama create mingli512/tinyllamas-stories-260k-f32 -f Modelfile
+
+
+
+-rw-r--r--. 1 sl6723 pustaff 608M Sep 27 09:52  ggml-model-q4_0.gguf
+-rw-r--r--. 1 sl6723 pustaff 863M Dec 19 07:21  LinguaMatic-Tiny.Q6_K.gguf
+-rw-r--r--. 1 sl6723 pustaff 863M Dec 19 07:21 'LinguaMatic-Tiny.Q6_K.gguf?download=true.1'
+-rw-r--r--. 1 sl6723 pustaff 2.9G Oct  2 19:09  mistral-7b-openorca.Q2_K.gguf
+-rw-r--r--. 1 sl6723 pustaff 3.6G Oct  2 19:11  mistral-7b-openorca.Q3_K_L.gguf
+-rw-r--r--. 1 sl6723 pustaff 7.2G Oct  2 19:15  mistral-7b-openorca.Q8_0.gguf
+-rw-r--r--. 1 sl6723 pustaff  190 Jan 19 14:33  Modelfile
+-rw-r--r--. 1 sl6723 pustaff 513M Aug 21 19:16  tinyllamas-stories-110m-f32.gguf
+-rw-r--r--. 1 sl6723 pustaff 1.2M Aug 21 21:01  tinyllamas-stories-260k-f32.gguf
+-rw-r--r--. 1 sl6723 pustaff  14G Nov 11 11:31  yi-34b-200k-llamafied.Q2_K.gguf
+
+Filesystem                            Size  Used Avail Use% Mounted on
+devtmpfs                              252G     0  252G   0% /dev
+tmpfs                                 252G   88K  252G   1% /dev/shm
+tmpfs                                 252G  1.9G  250G   1% /run
+tmpfs                                 252G     0  252G   0% /sys/fs/cgroup
+/dev/mapper/sl_base-root              159G   87G   72G  55% /
+/dev/sda2                            1014M  309M  706M  31% /boot
+/dev/mapper/sl_base-scratch            98G  798M   97G   1% /scratch
+/dev/mapper/sl_base-tmp                32G  1.5G   30G   5% /tmp
+/dev/mapper/sl_base-var                32G  1.1G   31G   4% /var
+/dev/sda1                             599M  5.8M  594M   1% /boot/efi
+/dev/mapper/sl_base-var_tmp           3.9G   62M  3.9G   2% /var/tmp
+172.28.62.2:/home                      15T  8.5T  6.6T  57% /home
+172.28.62.2:/opt/export               199G  150G   50G  75% /opt/export
+172.28.62.2:/scratch/network           50T   30T   21T  60% /scratch/network
+north:/ifs/eisnclu202/north/licensed  4.5T  3.7T  871G  82% /usr/licensed
+
+
+
+
+cd /home/sl6723/repo/llm_sample/ollamademo
+
+
+
+
