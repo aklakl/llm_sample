@@ -206,3 +206,18 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 
 ```
 
+
+
+* Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
+Princeton University Adroit  VS IDE=>https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
+Ollama pypi  =>https://pypi.org/project/ollama/
+
+
+```
+#Share folder /scratch/network/sl6723
+cd /scratch/network/sl6723/modles
+cd /home/sl6723/repo/llm_sample
+
+
+
+```
