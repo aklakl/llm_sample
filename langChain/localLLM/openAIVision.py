@@ -27,6 +27,7 @@ api_key = os.environ.get("OPENAI_API_KEY", "xxxxxxxxx")   # even your local don'
 api_key = "xxxx"
 
 
+#This required openai version>1.0.0
 def run_openai_vision():
     # Point to the local server
     client = OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed")

@@ -4,3 +4,4 @@ crewai
 duckduckgo-search
 langchain
 langchain-google-genai
+langchain-community

@@ -16,13 +16,14 @@ export OPENAI_API_KEY=sk-1111111111111111111
 export OPENAI_API_BASE=http://airedale-native-chicken.ngrok-free.app/v1
 #export OPENAI_API_BASE=http://192.168.0.232:1234/v1
 
-pip install -r requirements.txt --use-deprecated=legacy-resolver
 
-python3.12 -m venv crewagent
-source crewagent/bin/activate
+python3.12 -m venv crewaievn
+source crewaievn/bin/activate
 # deactivate
 
-python llm_sample/mcrewagent/crewagent.py
+pip install -r requirements.txt --use-deprecated=legacy-resolver
+
+python llm_sample/crewagent/crewagent.py
 
 
 

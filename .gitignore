@@ -12,6 +12,7 @@ node_modules/
 .venv*
 pyautogen/
 sdxlenv/
+crewaievn/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
