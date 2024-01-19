@@ -19,8 +19,24 @@ To get started, follow these steps:
    name:
 
    ```
+   #install the conda refer:https://docs.conda.io/projects/miniconda/en/latest/
+   mkdir -p ~/miniconda3
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+   rm -rf ~/miniconda3/miniconda.sh
+
+   ~/miniconda3/bin/conda init bash
+   ~/miniconda3/bin/conda init zsh
+
+   export PATH=~/miniconda3/bin:$PATH
+   echo $PATH
+   
    conda create -n ChatDev_conda_env python=3.9 -y
+
+   #face issue with "CondaError: Run 'conda init' before 'conda activate'"  fixed by this => https://stackoverflow.com/questions/55507519/python-activate-conda-env-through-shell-script
+   source ~/miniconda3/etc/profile.d/conda.sh
    conda activate ChatDev_conda_env
+
    ```
 
 3. **Install Dependencies:** Move into the `ChatDev` directory and install the necessary dependencies by running:
@@ -39,8 +55,12 @@ Or use LM Studio build your local LLM => https://lmstudio.ai/
    On Unix/Linux:
 
    ```
-    export OPENAI_API_KEY="your_OpenAI_API_key"
-    export OPENAI_API_BASE=http://airedale-native-chicken.ngrok-free.app/v1
+
+   #Sometimes if OPENAI_API_BASE not work , please set up to BASE_URL try once. refer:https://github.com/OpenBMB/ChatDev/issues/312
+   export OPENAI_API_KEY="sk-llllllllllllllllllllll"
+   export BASE_URL="http://192.168.137.176:1234/v1"
+   #export BASE_URL=http://airedale-native-chicken.ngrok-free.app/v1
+
 
    ```
 
@@ -58,13 +78,16 @@ Or use LM Studio build your local LLM => https://lmstudio.ai/
    On Unix/Linux:
 
    ```
-   python3 run.py --task "[description_of_your_idea]" --name "[project_name]"
+   #python3 run.py --task "[description_of_your_idea]" --name "[project_name]"
+   BASE_URL="http://192.168.137.176:1234/v1" OPENAI_API_KEY="sk-llllllllllllllllllllll" python3 run.py --task "web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)" --name "web_shopping_sys"
+
    ```
 
    On Windows:
 
    ```
    python run.py --task "[description_of_your_idea]" --name "[project_name]"
+
    ```
 
 7. **Run Your Software:** Once generated, you can find your software in the `WareHouse` directory under a specific
