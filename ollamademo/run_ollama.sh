@@ -8,4 +8,7 @@ nohup ollama serve >>ollamaServices.log &
 cloudflared tunnel --url localhost:11434/
 
 #Start ngrok for ssh
+#Generate an SSH Key Pair on UNIX and UNIX-Like Systems=>https://docs.oracle.com/en/cloud/cloud-at-customer/occ-get-started/generate-ssh-key-pair.html#GUID-8B9E7FCB-CEA3-4FB3-BF1A-FD3406A2432F
+#https://ngrok.com/docs/api/resources/ssh-credentials/
+#https://ngrok.com/docs/agent/ssh-reverse-tunnel-agent/
 ngrok tcp 22 > /dev/null &

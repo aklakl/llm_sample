@@ -213,15 +213,14 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
 Ollama pypi  =>https://pypi.org/project/ollama/
 
-
 ```
 #Princeton University Adroit Share folder /scratch/network
 cd /scratch/network/sl6723/
 cd /home/sl6723/repo/llm_sample
 cd /home/sl6723/.ollama/models
 
-ps -ef | grep 'cloudflared\|ollama\|ngrok\'
-
+ps -ef | grep 'cloudflared\|ollama\|ngrok\|litellm'
+netstat -aptn | grep '8000\|11434'
 
 
 
