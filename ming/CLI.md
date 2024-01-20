@@ -35,13 +35,14 @@ Offical code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggi
 Huggingface tinyllamas  （bin file style around 438 MB） => https://huggingface.co/karpathy/tinyllamas
 
 
-
 more than 4K content token 
 Yi-6B-200K content token (2.18 GB~9.94G)=>https://huggingface.co/01-ai/Yi-6B-200K
 yi-34b-200k-llamafied.Q2_K.gguf = 14.6 GB (around 14.6 GB~36.5 GB) =>https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF
 SG-Raccoon-Yi-200k model (around 23GB~45GB)[sg-raccoon-yi-200k-2.0.Q2_K.gguf=21.83 GiB(token content=200k)]=>https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF
 Mistral-7B-OpenOrca-GGUF-32k-token-content (around 3.08 GB~7.7GB)=>https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF
 
+
+stable code =>https://ollama.ai/library/stable-code
 
 
 Ming's Postman to test the general openAI API with local LLM => https://documenter.getpostman.com/view/3199697/2s9YsNdAEC
@@ -209,14 +210,30 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 
 
 * Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
-Princeton University Adroit  VS IDE=>https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
+Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
 Ollama pypi  =>https://pypi.org/project/ollama/
 
 
 ```
-#Share folder /scratch/network/sl6723
-cd /scratch/network/sl6723/modles
+#Princeton University Adroit Share folder /scratch/network
+cd /scratch/network/sl6723/
 cd /home/sl6723/repo/llm_sample
+cd /home/sl6723/.ollama/models
+
+ps -ef | grep 'cloudflared\|ollama\|ngrok\'
+
+
+
+
+#Quota limit warning for /home/sl6723    Using 10 GB of quota 10 GB. Consider deleting or archiving files to free up disk space. If you cannot free up enough space you can request more on this website: https://forms.rc.princeton.edu/quota
+#Check your Storage Quota   refer:https://myadroit.princeton.edu/pun/sys/quota
+du -sh  /home/sl6723  && du -h --max-depth=1 /home/sl6723 | sort -n -r | head -n 10  
+
+#Check the special temporary space
+ls -lah  /scratch/network | grep drwxrwxrwx
+
+#Download 45.6GB file testing your local space 
+wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg-raccoon-yi-200k-2.0.Q6_K.gguf?download=true
 
 
 

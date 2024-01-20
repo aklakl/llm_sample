@@ -6,6 +6,11 @@ Ollama offical Website => https://ollama.ai/
 Ollama github => https://github.com/jmorganca/ollama
 Ollama pip => https://pypi.org/project/ollama/
 
+#try cloudflare temp url => https://vinyl-oz-fell-clay.trycloudflare.com
+Ollama UI => https://ollama-gui.vercel.app/
+
+
+
 ```
 
 ### Install Ollama

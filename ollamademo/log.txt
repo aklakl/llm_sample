@@ -1,6 +1,43 @@
 
+
+20240120-
+# Tmp for convert the gguf models   | LinguaMatic-Tiny.Q6_K
+cd /scratch/network/sl6723/models
+ollama create mingli512/mistral-7b-openorca-Q2_K -f Modelfile
+ollama push mingli512/mistral-7b-openorca-Q2_K
+
+====unfinish====
+ollama push mingli512/linguaMatic-Tiny-Q6_K
+===finished====
+
+-rw-r--r--. 1 sl6723 pustaff 513M Aug 21 19:16  tinyllamas-stories-110m-f32.gguf   -- but not work for ollama run 
+-rw-r--r--. 1 sl6723 pustaff 1.2M Aug 21 21:01  tinyllamas-stories-260k-f32.gguf   -- but not work for ollama run 
+-rw-r--r--. 1 sl6723 pustaff 608M Sep 27 09:52  ggml-model-q4_0.gguf
+-rw-r--r--. 1 sl6723 pustaff 2.9G Oct  2 19:09  mistral-7b-openorca.Q2_K.gguf      -- works for curl
+
+
+
+===finished====
+#Test your local Ollama service
+curl http://localhost:11434/api/chat -d '{
+  "model": "mingli512/mistral-7b-openorca-Q2_K",
+  "messages": [
+    { "role": "user", "content": "why is the sky blue?" }
+  ]
+}'
+
+===========================================================
+
+
 Error: open /home/sl6723/.ollama/models/blobs/sha256:3177739432-partial: disk quota exceeded
 ollama create mingli512/tinyllamas-stories-260k-f32 -f Modelfile
+
+
+top - 12:47:08 up 23 days,  2:47,  3 users,  load average: 0.24, 0.29, 0.27
+Tasks: 1269 total,   1 running, 1268 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.4 sy,  0.0 ni, 98.5 id,  0.5 wa,  0.1 hi,  0.2 si,  0.0 st
+MiB Mem : 514844.1 total, 288303.9 free,  26293.2 used, 200247.0 buff/cache
+MiB Swap:   8000.0 total,   7931.4 free,     68.6 used. 483189.1 avail Mem 
 
 
 
