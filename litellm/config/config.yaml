@@ -1,3 +1,8 @@
+litellm_settings:
+  drop_params: true
+  set_verbose: true
+
+
 model_list:
   - model_name: gpt-4-team1
     litellm_params: # params for litellm.completion() - https://docs.litellm.ai/docs/completion/input#input---request-body

@@ -1,0 +1,31 @@
+LiteLLM: Proxy initialized with Config, Set models:
+    mistral-7b
+[2024-01-20 17:24:03 -0500] [1215886] [ERROR] Traceback (most recent call last):
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/starlette/routing.py", line 566, in __aenter__
+    await self._router.startup()
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/starlette/routing.py", line 654, in startup
+    await handler()
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/proxy/proxy_server.py", line 1470, in startup_event
+    await initialize(**worker_config)
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/proxy/proxy_server.py", line 1338, in initialize
+    ) = await proxy_config.load_config(router=llm_router, config_file_path=config)
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/proxy/proxy_server.py", line 1111, in load_config
+    router = litellm.Router(**router_params)  # type:ignore
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/router.py", line 193, in __init__
+    self.set_model_list(model_list)
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/router.py", line 1829, in set_model_list
+    ) = litellm.get_llm_provider(
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/utils.py", line 4245, in get_llm_provider
+    raise e
+  File "/home/sl6723/miniconda3/envs/ChatDev_conda_env/lib/python3.9/site-packages/litellm/utils.py", line 4232, in get_llm_provider
+    raise litellm.exceptions.BadRequestError(  # type: ignore
+litellm.exceptions.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=mingli512/mistral-7b-openorca-Q2_K
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+
+[2024-01-20 17:24:03 -0500] [1215886] [ERROR] Application startup failed. Exiting.
+[2024-01-20 17:24:03 -0500] [1215886] [INFO] Worker exiting (pid: 1215886)
+[2024-01-20 17:24:03 -0500] [1215822] [ERROR] Worker (pid:1215886) exited with code 3
+[2024-01-20 17:24:03 -0500] [1215822] [ERROR] Shutting down: Master
+[2024-01-20 17:24:03 -0500] [1215822] [ERROR] Reason: Worker failed to boot.

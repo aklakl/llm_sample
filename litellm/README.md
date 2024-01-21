@@ -10,15 +10,19 @@ litellm pip => https://pypi.org/project/litellm/
 
 ```
 
-### Install Ollama
+### Install litellm
 
 Suppose you don't have sudo permissions. you can install Ollama with source code as well. Please refer:https://github.com/jmorganca/ollama?tab=readme-ov-file#building
 
 ```
+pip install litellm
 
 #configuration => https://docs.litellm.ai/docs/proxy/configs
-litellm --config /path/to/config.yaml
+#litellm --config /path/to/config.yaml
 
+litellm --config /scratch/network/sl6723/repo/llm_sample/litellm/config/config.yaml
+litellm --model ollama/phi
+litellm --test
 
 
 ```

@@ -1,5 +1,193 @@
 
 
+
+20240120-got ollama crashed
+2024/01/20 22:29:08 dyn_ext_server.go:90: INFO Loading Dynamic llm server: /tmp/ollama717589626/cuda_v12/libext_server.so
+2024/01/20 22:29:08 dyn_ext_server.go:139: INFO Initializing llama server
+llama_model_loader: loaded meta data with 20 key-value pairs and 325 tensors from /home/sl6723/.ollama/models/blobs/sha256:04778965089b91318ad61d0995b7e44fad4b9a9f4e049d7be90932bf8812e828 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = phi2
+llama_model_loader: - kv   1:                               general.name str              = Phi2
+llama_model_loader: - kv   2:                        phi2.context_length u32              = 2048
+llama_model_loader: - kv   3:                      phi2.embedding_length u32              = 2560
+llama_model_loader: - kv   4:                   phi2.feed_forward_length u32              = 10240
+llama_model_loader: - kv   5:                           phi2.block_count u32              = 32
+llama_model_loader: - kv   6:                  phi2.attention.head_count u32              = 32
+llama_model_loader: - kv   7:               phi2.attention.head_count_kv u32              = 32
+llama_model_loader: - kv   8:          phi2.attention.layer_norm_epsilon f32              = 0.000010
+llama_model_loader: - kv   9:                  phi2.rope.dimension_count u32              = 32
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,51200]   = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,51200]   = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,50000]   = ["Ġ t", "Ġ a", "h e", "i n", "r e",...
+llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 50256
+llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 50256
+llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 50256
+llama_model_loader: - kv  19:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  195 tensors
+llama_model_loader: - type q4_0:  129 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: mismatch in special tokens definition ( 910/51200 vs 944/51200 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = phi2
+llm_load_print_meta: vocab type       = BPE
+llm_load_print_meta: n_vocab          = 51200
+llm_load_print_meta: n_merges         = 50000
+llm_load_print_meta: n_ctx_train      = 2048
+llm_load_print_meta: n_embd           = 2560
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 32
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_rot            = 32
+llm_load_print_meta: n_embd_head_k    = 80
+llm_load_print_meta: n_embd_head_v    = 80
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 2560
+llm_load_print_meta: n_embd_v_gqa     = 2560
+llm_load_print_meta: f_norm_eps       = 1.0e-05
+llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 10240
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 2048
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 3B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 2.78 B
+llm_load_print_meta: model size       = 1.49 GiB (4.61 BPW) 
+llm_load_print_meta: general.name     = Phi2
+llm_load_print_meta: BOS token        = 50256 '<|endoftext|>'
+llm_load_print_meta: EOS token        = 50256 '<|endoftext|>'
+llm_load_print_meta: UNK token        = 50256 '<|endoftext|>'
+llm_load_print_meta: LF token         = 128 'Ä'
+llm_load_tensors: ggml ctx size       =    0.12 MiB
+llm_load_tensors: using CUDA for GPU acceleration
+llm_load_tensors: system memory used  =   70.44 MiB
+llm_load_tensors: VRAM used           = 1456.19 MiB
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+...........................................................................................
+llama_new_context_with_model: n_ctx      = 2048
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init: VRAM kv self = 640.00 MB
+llama_new_context_with_model: KV self size  =  640.00 MiB, K (f16):  320.00 MiB, V (f16):  320.00 MiB
+llama_build_graph: non-view tensors processed: 774/774
+llama_new_context_with_model: compute buffer total size = 165.19 MiB
+llama_new_context_with_model: VRAM scratch buffer: 162.00 MiB
+llama_new_context_with_model: total VRAM used: 2258.20 MiB (model: 1456.19 MiB, context: 802.00 MiB)
+2024/01/20 22:29:08 dyn_ext_server.go:147: INFO Starting llama main loop
+2024/01/20 22:29:08 dyn_ext_server.go:161: INFO loaded 0 images
+CUDA error: unspecified launch failure
+  current device: 0, in function ggml_cuda_op_flatten at /home/sl6723/repo/ollama/llm/llama.cpp/ggml-cuda.cu:8692
+  cudaMemcpyAsync(dst->data, dst_ddf, ggml_nbytes(dst), cudaMemcpyDeviceToHost, main_stream)
+GGML_ASSERT: /home/sl6723/repo/ollama/llm/llama.cpp/ggml-cuda.cu:229: !"CUDA error"
+No symbol table is loaded.  Use the "file" command.
+[New LWP 1322214]
+[New LWP 1322215]
+[New LWP 1322216]
+[New LWP 1322217]
+[New LWP 1322218]
+[New LWP 1322219]
+[New LWP 1322220]
+[New LWP 1322221]
+[New LWP 1322222]
+[New LWP 1322223]
+[New LWP 1322224]
+[New LWP 1322225]
+[New LWP 1322226]
+[New LWP 1322227]
+[New LWP 1322228]
+[New LWP 1322234]
+[New LWP 1322235]
+[New LWP 1322236]
+[New LWP 1322237]
+[New LWP 1322238]
+[New LWP 1322239]
+[New LWP 1322240]
+[New LWP 1322241]
+[New LWP 1322242]
+[New LWP 1322243]
+[New LWP 1322244]
+[New LWP 1322245]
+[New LWP 1322246]
+[New LWP 1322247]
+[New LWP 1322248]
+[New LWP 1322249]
+[New LWP 1322250]
+[New LWP 1322251]
+[New LWP 1322252]
+[New LWP 1322253]
+[New LWP 1322254]
+[New LWP 1322255]
+[New LWP 1322256]
+[New LWP 1322257]
+[New LWP 1322258]
+[New LWP 1322259]
+[New LWP 1322260]
+[New LWP 1322261]
+[New LWP 1322262]
+[New LWP 1322263]
+[New LWP 1322264]
+[New LWP 1322265]
+[New LWP 1322266]
+[New LWP 1322267]
+[New LWP 1322268]
+[New LWP 1322269]
+[New LWP 1322270]
+[New LWP 1322282]
+[New LWP 1322283]
+[New LWP 1322284]
+[New LWP 1322285]
+[New LWP 1322286]
+[New LWP 1322287]
+[New LWP 1322288]
+[New LWP 1322289]
+[New LWP 1322290]
+[New LWP 1322291]
+[New LWP 1322292]
+[New LWP 1322293]
+[New LWP 1322294]
+[New LWP 1322295]
+[New LWP 1322296]
+[New LWP 1322297]
+[New LWP 1322298]
+[New LWP 1322299]
+[New LWP 1322300]
+[New LWP 1322301]
+warning: File "/home/sl6723/go1.21.6.linux-amd64/src/runtime/runtime-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+To enable execution of this file add
+        add-auto-load-safe-path /home/sl6723/go1.21.6.linux-amd64/src/runtime/runtime-gdb.py
+line to your configuration file "/home/sl6723/.gdbinit".
+To completely disable this security protection add
+        set auto-load safe-path /
+line to your configuration file "/home/sl6723/.gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+        info "(gdb)Auto-loading safe path"
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+runtime.futex () at /home/sl6723/go1.21.6.linux-amd64/src/runtime/sys_linux_amd64.s:558
+558             MOVL    AX, ret+40(FP)
+No symbol "frame" in current context.
+[Inferior 1 (process 1322213) detached]
+2024-01-21T03:29:41Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: EOF" cfRay=848c789871c378d0-EWR event=1 originService=http://localhost:11434/
+2024-01-21T03:29:41Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: EOF" connIndex=0 dest=https://catherine-alt-faq-authentic.trycloudflare.com/api/generate event=0 ip=198.41.192.77 type=http
+Aborted
+
+
+
+
+
+
 20240120-
 # Tmp for convert the gguf models   | LinguaMatic-Tiny.Q6_K
 cd /scratch/network/sl6723/models

@@ -32,7 +32,7 @@ http://192.168.0.232:7861
 #refer: https://everything.curl.dev/usingcurl/telnet
 curl telnet://192.168.0.232:7860
 curl telnet://127.0.0.1:7861
-curl telnet://127.0.0.1:7861
+curl telnet://127.0.0.1:11434
 wget https://huggingface.co/afrideva/Tiny-Vicuna-1B-GGUF/resolve/main/tiny-vicuna-1b.q4_k_m.gguf
 
 ```
