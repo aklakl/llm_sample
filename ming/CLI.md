@@ -30,12 +30,14 @@ LinguaMatic-Tiny-GGUF (Around 483MB~904MB) => https://huggingface.co/erfanzar/Li
 Tiny-Vicuna-1B-GGUF (around 482MB~1.17G) => https://huggingface.co/afrideva/Tiny-Vicuna-1B-GGUF
 TinyLlama-1.1B-Chat-v0.3-GGUF(around 482MB~1.17G)  => https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF   (Huggingface-API https://huggingface.co/api/models/TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF/   TinyLlama introduction=>https://youtu.be/T5l228844NI)
 TinyLlama-1.1B-1T-OpenOrca-GGUF(around 482MB~1.17G) => https://huggingface.co/TheBloke/TinyLlama-1.1B-1T-OpenOrca-GGUF
-Offical TinyLlama (ggml-model-q4_0.gguf 637 MB）=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v0.2-GGUF
-Offical code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-python-v0.1
+Official TinyLlama (ggml-model-q4_0.gguf 637 MB）=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v0.2-GGUF
+Official code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-python-v0.1
 Huggingface tinyllamas  （bin file style around 438 MB） => https://huggingface.co/karpathy/tinyllamas
 
+Huggingface Vision Models (GGUF)=>https://huggingface.co/collections/lmstudio-ai/vision-models-gguf-6577e1ce821f439498ced0c1
 
-more than 4K content token 
+
+More than 4K content token 
 Yi-6B-200K content token (2.18 GB~9.94G)=>https://huggingface.co/01-ai/Yi-6B-200K
 yi-34b-200k-llamafied.Q2_K.gguf = 14.6 GB (around 14.6 GB~36.5 GB) =>https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF
 SG-Raccoon-Yi-200k model (around 23GB~45GB)[sg-raccoon-yi-200k-2.0.Q2_K.gguf=21.83 GiB(token content=200k)]=>https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF
