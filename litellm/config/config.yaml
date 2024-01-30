@@ -1,23 +1,22 @@
+litellm_settings:
+  drop_params: true
+  set_verbose: true
+
 model_list:
-  - model_name: gpt-4-team1
-    litellm_params: # params for litellm.completion() - https://docs.litellm.ai/docs/completion/input#input---request-body
-      model: azure/chatgpt-v-2
-      api_base: https://openai-gpt-4-test-v-1.openai.azure.com/
-      api_version: "2023-05-15"
-      azure_ad_token: eyJ0eXAiOiJ
-      seed: 12
-      max_tokens: 20
-  - model_name: gpt-4-team2
-    litellm_params:
-      model: azure/gpt-4
-      api_key: sk-123
-      api_base: https://openai-gpt-4-test-v-2.openai.azure.com/
-      temperature: 0.2
   - model_name: mistral-7b
     litellm_params:
-      model: mingli512/mistral-7b-openorca-Q2_K
+      model: ollama/mingli512/mistral-7b-openorca-Q2_K
       api_base: http://127.0.0.1:11434
       headers: {
         "HTTP-Referer": "litellm.ai",  
         "X-Title": "LiteLLM Server"
       }
+- model_name: phi
+    litellm_params:
+      model: ollama/phi
+      api_base: http://127.0.0.1:11434
+      headers: {
+        "HTTP-Referer": "litellm.ai",
+        "X-Title": "LiteLLM Server"
+      }
+
