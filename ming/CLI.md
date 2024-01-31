@@ -1,10 +1,17 @@
-* Ming's CLI
+# Ming's CLI
 
 ### Coding Style Guide
 In general, we adhere to [Google Python style guide](https://google.github.io/styleguide/pyguide.html).
 
 
-* Common customized base_url
+* Build the free LLM based on free resources or locally 
+* Go to Google colab Start the ngrok mapping LiteLLM services => https://drive.google.com/file/d/1IZnVZQJQqLKf_VleM3a5bsfWfKIYfSdE/view?usp=sharing
+* Go to Google colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+* LM Studio build your local LLM => https://lmstudio.ai/
+
+
+
+### Common customized base_url
 ```
 base_url = "http://192.168.40.229:1234/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
 base_url = "http://dashing-slowly-kiwi.ngrok-free.app/v1"      #Sidan's ngrok url 
@@ -15,7 +22,7 @@ base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like Open
 
 
 
-* Common customized model
+### Common customized model
 ```
 Ollama run saikatkumardey/tinyllama   (Ollama model around 903MB) => refer：https://ollama.ai/saikatkumardey/tinyllama 
 
@@ -58,7 +65,7 @@ LiteLLM-huggingface use default=huggingface/bigcode/starcoder    (PS:Required HF
 
 
 
-* Testing bash shell
+### Testing bash shell
 ```
 curl http://192.168.0.232:3000/v1/chat/completions \
   -H "Content-Type: application/json" \
@@ -72,7 +79,7 @@ curl http://192.168.0.232:3000/v1/chat/completions \
 
 
 
-* Testing the OpenLLM
+### Testing the OpenLLM
 ```
 export OPENLLM_ENDPOINT=http://192.168.0.232:3000
 openllm query 'What are large language models?'
@@ -85,7 +92,7 @@ openllm query 'What are large language models?'
 
 
 
-* OpenAI and Local access URL
+### OpenAI and Local access URL
 ```
 http://192.168.0.232:1234/v1/models
 http://192.168.0.232:1234/metrics
@@ -103,7 +110,7 @@ https://api.openai.com/v1/models
 
 
 
-* common docker command line
+### common docker command line
 ```
 docker pull python
 docker image ls
@@ -139,7 +146,7 @@ docker push mingli512/ming_llm:latest
 ```
 
 
-* My local path
+### My local path
 ```
 cd D:\work\repo\tmp\mingwork
 
@@ -147,7 +154,7 @@ cd D:\work\repo\tmp\mingwork
 
 
 
-* Sidan's server CLI
+### Sidan's server CLI
 ```
 ssh sl6723@192.168.0.232
 echo $OSTYPE - $(uname -srm)
@@ -211,11 +218,10 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 
 
 
-* Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
-Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
-Ollama pypi  =>https://pypi.org/project/ollama/
-Start the LLM Ollama service in PU's Adroit server. Please use instruction => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
-
+### Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
+* Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
+* Ollama pypi  =>https://pypi.org/project/ollama/
+* Start the LLM Ollama service in PU's Adroit server. Please use instruction => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
 
 ```
 #Princeton University Adroit Share folder /scratch/network
@@ -238,7 +244,6 @@ ls -lah  /scratch/network | grep drwxrwxrwx
 
 #Download 45.6GB file testing your local space 
 wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg-raccoon-yi-200k-2.0.Q6_K.gguf?download=true
-
 
 
 ```
