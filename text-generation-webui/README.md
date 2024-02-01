@@ -1,13 +1,41 @@
 # Sample to use text-generation-webui with docker 
 
-Ming's Colab text-generation-webui => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_
-Text-generation-webui Offical github=>https://github.com/oobabooga/text-generation-webui
-Atinoda github=>https://github.com/Atinoda/text-generation-webui-docker
+* Ming's Colab text-generation-webui => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_
+* Text-generation-webui official github => https://github.com/oobabooga/text-generation-webui
+* Atinoda github => https://github.com/Atinoda/text-generation-webui-docker
+
+
+
+### One-click-installer with github repo
+
+The script uses Miniconda to set up a Conda environment in the `installer_files` folder.
+
+If you ever need to install something manually in the `installer_files` environment, you can launch an interactive shell using the cmd script: `cmd_linux.sh`, `cmd_windows.bat`, `cmd_macos.sh`, or `cmd_wsl.bat`.
+
+* There is no need to run any of those scripts (`start_`, `update_`, or `cmd_`) as admin/root.
+* For additional instructions about AMD and WSL setup, consult [the documentation](https://github.com/oobabooga/text-generation-webui/wiki).
+* For automated installation, you can use the `GPU_CHOICE`, `USE_CUDA118`, `LAUNCH_AFTER_INSTALL`, and `INSTALL_EXTENSIONS` environment variables. For instance: `GPU_CHOICE=A USE_CUDA118=FALSE LAUNCH_AFTER_INSTALL=FALSE INSTALL_EXTENSIONS=FALSE ./start_linux.sh`.
+
+* For Ming's CLI
+
+```
+
+conda create --name installer_files
+conda activate installer_files
+#conda deactivate
+#In PU's 
+cd /scratch/network/sl6723/repo/
+./start_linux.sh
+
+```
+
+
 
 
 ## run text-generation-webui on ming's docker images(within tiny-vicuna-1b.q4_k_m.gguf model)
 
-1.  CLIs=>
+* 1.  CLIs=>
+
 ```
 #User root's password is root, user app's password is app;
 git pull mingli512/ming-text-generation-webui:latest
@@ -26,6 +54,7 @@ python3 server.py --model tiny-vicuna-1b.q4_k_m.gguf --api --public-api
 
 
 ### Testing CLI
+
 ```
 
 http://192.168.0.232:7861

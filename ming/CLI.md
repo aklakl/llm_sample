@@ -172,6 +172,11 @@ ngrok config add-authtoken $Your_token
 ngrok http --domain=airedale-native-chicken.ngrok-free.app 9000
 ngrok http --domain=dashing-slowly-kiwi.ngrok-free.app 1234
 
+ngrok tcp 9000
+cloudflared tunnel --url localhost:11434/
+
+
+
 ===
 docker pull litellm/ollama
 docker run -d -p 8000:8000 --name litellm_ollama litellm/ollama
@@ -233,6 +238,14 @@ cd /home/sl6723/repo/llm_sample/ollamademo && bash run_ollama.sh
 ps -ef | grep 'cloudflared\|ollama\|ngrok\|litellm'
 netstat -aptn | grep '8000\|11434'
 
+#Start the LiteLLM with Ollama
+cd /scratch/network/sl6723/tmp/proc
+ollama serve >>ollama.log &
+ollama pull dolphin-phi
+ollama run dolphin-phi >>dolphin-phi.log &
+litellm --model ollama/dolphin-phi >>litellm.log &
+cloudflared tunnel --url localhost:8000/ >>cloudflared.log &
+
 
 
 #Quota limit warning for /home/sl6723    Using 10 GB of quota 10 GB. Consider deleting or archiving files to free up disk space. If you cannot free up enough space you can request more on this website: https://forms.rc.princeton.edu/quota
@@ -245,5 +258,13 @@ ls -lah  /scratch/network | grep drwxrwxrwx
 #Download 45.6GB file testing your local space 
 wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg-raccoon-yi-200k-2.0.Q6_K.gguf?download=true
 
+
+```
+
+### conda cli
+
+```
+#refer:https://docs.conda.io/projects/conda/en/latest/commands/clean.html
+conda clean --all 
 
 ```
