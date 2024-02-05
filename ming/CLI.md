@@ -7,6 +7,7 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * Build the free LLM based on free resources or locally 
 * Go to Google colab Start the ngrok mapping LiteLLM services => https://drive.google.com/file/d/1IZnVZQJQqLKf_VleM3a5bsfWfKIYfSdE/view?usp=sharing
 * Go to Google colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+* Go to Google colab Start the LiteLLM_HuggingFace local LLM services => => https://colab.research.google.com/github/BerriAI/litellm/blob/main/cookbook/LiteLLM_HuggingFace.ipynb
 * LM Studio build your local LLM => https://lmstudio.ai/
 
 
