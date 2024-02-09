@@ -229,6 +229,7 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 * Ollama pypi  =>https://pypi.org/project/ollama/
 * Start the LLM Ollama service in PU's Adroit server. Please use instruction => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
 
+
 ```
 #Princeton University Adroit Share folder /scratch/network
 cd /scratch/network/sl6723/
@@ -260,6 +261,16 @@ ls -lah  /scratch/network | grep drwxrwxrwx
 wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg-raccoon-yi-200k-2.0.Q6_K.gguf?download=true
 
 
+```
+
+
+### PU's IAC Workstation
+
+```
+PU's IAC Workstation IP(Sidan's ngrok account)=>128.112.73.83
+ngrok tcp 4321
+tcp://2.tcp.ngrok.io:10864
+http://2.tcp.ngrok.io:10864/v1/models
 ```
 
 ### conda cli
