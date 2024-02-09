@@ -12,11 +12,15 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
 
-### Common customized base_url
+### Common customized base_url (continuous updates)
 ```
-base_url = "http://192.168.40.229:1234/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
+http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation
+http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
+
+
+base_url = "http://2.tcp.ngrok.io:10864/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
 base_url = "http://dashing-slowly-kiwi.ngrok-free.app/v1"      #Sidan's ngrok url 
-base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  
+base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 
 
 ```
