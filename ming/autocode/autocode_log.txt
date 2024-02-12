@@ -89,3 +89,883 @@ sh
 echo "Web shopping system requirement:"
 ```
 Product_manager
+=======mingdebug====>before groupchat.py 366
+=======mingdebug====>after groupchat.py 366=>final= True |name= User_proxy
+```python
+print("Web shopping system requirement:")
+```
+
+sh
+```bash
+echo "Web shopping system requirement:"
+```
+Product_manager
+=======mingdebug====>541 line,repy=> Build a project management system (include project/task management, bug report management, source code management) app
+projectmanagement
+Build a Web content management system(include news management, article management, multimedia management, blog management) app
+Business analyst (to chat_manager):
+
+Build a project management system (include project/task management, bug report management, source code management) app
+projectmanagement
+Build a Web content management system(include news management, article management, multimedia management, blog management) app
+
+--------------------------------------------------------------------------------
+GroupChat select_speaker failed to resolve the next speaker's name. This is because the speaker selection OAI call returned:
+
+projectmanagement
+Build an online course learning system (include learning material management, test management, student management, teacher management)app
+product_manager
+The proposal seems good. But I think the system should also include course evaluation and attendance management.
+=======mingdebug====>before groupchat.py 366
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+projectmanagement
+Build an online course learning system (include learning material management, test management, student management, teacher management)app
+product_manager
+The proposal seems good. But I think the system should also include course evaluation and attendance management.
+=======mingdebug====>541 line,repy=> Build an e-learning system(include course management, test/exam management, online discussion management) app
+elearning
+Build an e-commerce system(include online store management, payment management) app
+ecommerce
+Product_manager (to chat_manager):
+
+Build an e-learning system(include course management, test/exam management, online discussion management) app
+elearning
+Build an e-commerce system(include online store management, payment management) app
+ecommerce
+
+--------------------------------------------------------------------------------
+=======mingdebug====>before groupchat.py 366
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+Build a project/task management system (include project/task management, bug report management, source code management) app
+
+Business analyst
+=======mingdebug====>541 line,repy=> Build a social networking site(include personal information management, friendship management, message management) app
+Business analyst (to chat_manager):
+
+Build a social networking site(include personal information management, friendship management, message management) app
+
+--------------------------------------------------------------------------------
+GroupChat select_speaker failed to resolve the next speaker's name. This is because the speaker selection OAI call returned:
+
+socialnetworking
+
+user_proxy
+=======mingdebug====>before groupchat.py 366
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+socialnetworking
+
+user_proxy
+=======mingdebug====>541 line,repy=> Build a Web forum(include user management, topic management, reply management) app
+forum
+Build a wiki(include user management, page management, edit history management) app
+Product_manager (to chat_manager):
+
+Build a Web forum(include user management, topic management, reply management) app
+forum
+Build a wiki(include user management, page management, edit history management) app
+
+--------------------------------------------------------------------------------
+GroupChat select_speaker failed to resolve the next speaker's name. This is because the speaker selection OAI call returned:
+
+=======mingdebug====>before groupchat.py 366
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+=======mingdebug====>541 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug====>before groupchat.py 366
+Traceback (most recent call last):
+  File "/scratch/network/sl6723/repo/llm_sample/ming/autocode/autocode.py", line 276, in <module>
+    run_autogen_main()
+  File "/scratch/network/sl6723/repo/llm_sample/ming/autocode/autocode.py", line 94, in run_autogen_main
+    user_proxy.initiate_chat(
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 793, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 504, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 679, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1637, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/groupchat.py", line 526, in run_chat
+    # select the next speaker
+              ^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/groupchat.py", line 366, in select_speaker
+    print("=======mingdebug====>before groupchat.py 366")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1055, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1074, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/oai/client.py", line 583, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/oai/client.py", line 265, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': "'messages' array must only contain objects with a 'content' field that is not empty."}
+Timestamp: 1707752546.8107688
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14bf409b3cd0>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= User_proxy
+```python
+print("Web shopping system requirement:")
+```
+
+sh
+```bash
+echo "Web shopping system requirement:"
+```
+Product_manager
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14beb4879610>
+=======mingdebug====>541 line,repy=> Build a project management system (include project/task management, bug report management, source code management) app
+projectmanagement
+Build a Web content management system(include news management, article management, multimedia management, blog management) app
+Business analyst (to chat_manager):
+
+Build a project management system (include project/task management, bug report management, source code management) app
+projectmanagement
+Build a Web content management system(include news management, article management, multimedia management, blog management) app
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14beb4879610>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build a project management system (include project/task management, bug report management, source code management) app\nprojectmanagement\nBuild a Web content management system(include news management, article management, multimedia management, blog management) app', 'role': 'user', 'name': 'Business analyst'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+projectmanagement
+Build an online course learning system (include learning material management, test management, student management, teacher management)app
+product_manager
+The proposal seems good. But I think the system should also include course evaluation and attendance management.
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14bf3ebd9ad0>
+=======mingdebug====>541 line,repy=> Build an e-learning system(include course management, test/exam management, online discussion management) app
+elearning
+Build an e-commerce system(include online store management, payment management) app
+ecommerce
+Product_manager (to chat_manager):
+
+Build an e-learning system(include course management, test/exam management, online discussion management) app
+elearning
+Build an e-commerce system(include online store management, payment management) app
+ecommerce
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14bf3ebd9ad0>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build a project management system (include project/task management, bug report management, source code management) app\nprojectmanagement\nBuild a Web content management system(include news management, article management, multimedia management, blog management) app', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Build an e-learning system(include course management, test/exam management, online discussion management) app\nelearning\nBuild an e-commerce system(include online store management, payment management) app\necommerce', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+Build a project/task management system (include project/task management, bug report management, source code management) app
+
+Business analyst
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14beb4879610>
+=======mingdebug====>541 line,repy=> Build a social networking site(include personal information management, friendship management, message management) app
+Business analyst (to chat_manager):
+
+Build a social networking site(include personal information management, friendship management, message management) app
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14beb4879610>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build a project management system (include project/task management, bug report management, source code management) app\nprojectmanagement\nBuild a Web content management system(include news management, article management, multimedia management, blog management) app', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Build an e-learning system(include course management, test/exam management, online discussion management) app\nelearning\nBuild an e-commerce system(include online store management, payment management) app\necommerce', 'role': 'user', 'name': 'Product_manager'}, {'content': 'Build a social networking site(include personal information management, friendship management, message management) app', 'role': 'user', 'name': 'Business analyst'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+socialnetworking
+
+user_proxy
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14bf3ebd9ad0>
+=======mingdebug====>541 line,repy=> Build a Web forum(include user management, topic management, reply management) app
+forum
+Build a wiki(include user management, page management, edit history management) app
+Product_manager (to chat_manager):
+
+Build a Web forum(include user management, topic management, reply management) app
+forum
+Build a wiki(include user management, page management, edit history management) app
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14bf3ebd9ad0>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build a project management system (include project/task management, bug report management, source code management) app\nprojectmanagement\nBuild a Web content management system(include news management, article management, multimedia management, blog management) app', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Build an e-learning system(include course management, test/exam management, online discussion management) app\nelearning\nBuild an e-commerce system(include online store management, payment management) app\necommerce', 'role': 'user', 'name': 'Product_manager'}, {'content': 'Build a social networking site(include personal information management, friendship management, message management) app', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Build a Web forum(include user management, topic management, reply management) app\nforum\nBuild a wiki(include user management, page management, edit history management) app', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+=======mingdebug529====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14bf409b3cd0>
+=======mingdebug====>541 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14bf409b3cd0>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build a project management system (include project/task management, bug report management, source code management) app\nprojectmanagement\nBuild a Web content management system(include news management, article management, multimedia management, blog management) app', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Build an e-learning system(include course management, test/exam management, online discussion management) app\nelearning\nBuild an e-commerce system(include online store management, payment management) app\necommerce', 'role': 'user', 'name': 'Product_manager'}, {'content': 'Build a social networking site(include personal information management, friendship management, message management) app', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Build a Web forum(include user management, topic management, reply management) app\nforum\nBuild a wiki(include user management, page management, edit history management) app', 'role': 'user', 'name': 'Product_manager'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+Timestamp: 1707752859.4881704
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14748afbfc10>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug529====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14748afbfc10>
+=======mingdebug====>541 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug526====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14748afbfc10>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+Timestamp: 1707754339.7988803
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message[content]=> Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+=======mingdebug529====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14797687fc10>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business analyst
+"User\_proxy"
+Product manager
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x1478ea747550>
+=======mingdebug====>547 line,repy=> Provide the proposal with more detail and requirement specification.
+Business analyst (to chat_manager):
+
+Provide the proposal with more detail and requirement specification.
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message[content]=> Provide the proposal with more detail and requirement specification.
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x1478ea747550>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Provide the proposal with more detail and requirement specification.', 'role': 'user', 'name': 'Business analyst'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x1478ea747d50>
+=======mingdebug====>547 line,repy=> Provide the design document.
+Product_manager (to chat_manager):
+
+Provide the design document.
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message[content]=> Provide the design document.
+=======mingdebug529====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x1478ea747d50>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Provide the proposal with more detail and requirement specification.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Provide the design document.', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name=  Include the ER diagram and class diagram.
+=======mingdebug529====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14797687fc10>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message[content]=> 
+=======mingdebug529====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14797687fc10>
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Provide the proposal with more detail and requirement specification.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'Provide the design document.', 'role': 'user', 'name': 'Product_manager'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+===========start_logging=============
+===========start_logging============= current time:-  2024-02-12 11:43:18.091094 |timestamp:- 1707756198.091094
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message[content]=> Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+=======mingdebug528====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x1484ca04b250> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name=  for me.
+product\_manager
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x1484ca04b250>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message[content]=> 
+=======mingdebug528====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x1484ca04b250> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+===========start_logging============= current time:-  2024-02-12 11:48:07.889171 |timestamp:- 1707756487.889171
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+f <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x150870c782d0> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x150870c782d0>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=====================completed run_autogen_main============================
+===========completed============= __main__
+===========start_logging============= current time:-  2024-02-12 13:26:39.521966 |timestamp:- 1707762399.521966
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15480130b150> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15480130b150>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15480130b150> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+===========start_logging============= current time:-  2024-02-12 13:27:21.368258 |timestamp:- 1707762441.368258
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15460b872810> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15460b872810>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15460b872810> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+===========start_logging============= current time:-  2024-02-12 13:29:32.787048 |timestamp:- 1707762572.787048
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15387415f2d0> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+len(message_content)=> 2
+i=> 0
+i=> 1
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15387415f2d0>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x15387415f2d0> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+len(message_content)=> 3
+i=> 0
+i=> 1
+i=> 2
+===========start_logging============= current time:-  2024-02-12 13:40:52.994882 |timestamp:- 1707763252.994882
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b12ea27050> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+===========start_logging============= current time:-  2024-02-12 13:41:05.581373 |timestamp:- 1707763265.581373
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x1467962c7050> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+len(list_message_content)=> 2
+===========start_logging============= current time:-  2024-02-12 13:41:20.762631 |timestamp:- 1707763280.762631
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x1532c9d0e750> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+len(list_message_content)=> 2
+===========start_logging============= current time:-  2024-02-12 13:44:49.590275 |timestamp:- 1707763489.590275
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 2
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 3
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 4
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 5
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 6
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 7
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 8
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 9
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 10
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 11
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 12
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 13
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 14
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 15
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 16
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 17
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 18
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 19
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 20
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= Business_analyst
+
+User_proxy
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14b18385e750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=====================completed run_autogen_main============================
+===========completed============= __main__
+===========start_logging============= current time:-  2024-02-12 13:45:33.872664 |timestamp:- 1707763533.872664
+=====================starting run_autogen_main============================
+User_proxy (to chat_manager):
+
+Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)
+
+--------------------------------------------------------------------------------
+=======mingdebug512====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user'}
+=======mingdebug520====>message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14eae47ce750> |message=> {'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 2
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 2
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+=======mingdebug533====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14ea586ac550>
+=======mingdebug====>547 line,repy=> Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.
+The user can input the number using button or keyboard of phone.
+User can delete the number in the display by click the “delete”button.
+When user finish input the number and operation. Click the equal button to get result
+After press enter key on the keyboard. The app will automatically compute the result.
+Business analyst (to chat_manager):
+
+Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.
+The user can input the number using button or keyboard of phone.
+User can delete the number in the display by click the “delete”button.
+When user finish input the number and operation. Click the equal button to get result
+After press enter key on the keyboard. The app will automatically compute the result.
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}
+=======mingdebug530====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14ea586ac550> |message=> {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 3
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 3
+=======mingdebug====>after groupchat.py 366=>final= True |name=  
+The app also support decimal point function.
+user_proxy
+sh
+cd /home/project/web_shopping_system
+python shopping_system.py
+=======mingdebug533====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14ea586ac5d0>
+=======mingdebug====>547 line,repy=> The mobile application is a photo album manager.
+It contains three basic function, add/edit/delete photo.
+User can create new album by click “new”button.
+When user select an image and drag it to album. User can save the image into the album.
+User can delete the album or image in the album by long press the album or image.
+The app will show all albums in the phone. User can scroll down or up to view more album.
+Product_manager (to chat_manager):
+
+The mobile application is a photo album manager.
+It contains three basic function, add/edit/delete photo.
+User can create new album by click “new”button.
+When user select an image and drag it to album. User can save the image into the album.
+User can delete the album or image in the album by long press the album or image.
+The app will show all albums in the phone. User can scroll down or up to view more album.
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}
+=======mingdebug530====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14ea586ac5d0> |message=> {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 4
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 4
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+=======mingdebug533====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14eae47ce750>
+=======mingdebug====>547 line,repy=> 
+User_proxy (to chat_manager):
+
+
+
+--------------------------------------------------------------------------------
+=======mingdebug520====>message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug530====>speaker=> <autogen.agentchat.user_proxy_agent.UserProxyAgent object at 0x14eae47ce750> |message=> {'content': '', 'role': 'user', 'name': 'User_proxy'}
+=======mingdebug====>before groupchat.py 366|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}]
+=======before clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}, {'content': '', 'role': 'user', 'name': 'User_proxy'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |list_message_content.length=> 5
+=======after clear_up_message_with_empty_content|messages=> [{'content': 'Build the requirement of a Web shopping system(It include User Authentication and Authorization/User registration and login functionality/Product Management/Shopping Cart/Order Processing/Search and Navigation/ include the Design document)', 'role': 'user', 'name': 'User_proxy'}, {'content': 'Build an app for the android phone. The app is a simple calculator. It support add, subtract, multiply, divide functionality.\nThe user can input the number using button or keyboard of phone.\nUser can delete the number in the display by click the “delete”button.\nWhen user finish input the number and operation. Click the equal button to get result\nAfter press enter key on the keyboard. The app will automatically compute the result.', 'role': 'user', 'name': 'Business analyst'}, {'content': 'The mobile application is a photo album manager.\nIt contains three basic function, add/edit/delete photo.\nUser can create new album by click “new”button.\nWhen user select an image and drag it to album. User can save the image into the album.\nUser can delete the album or image in the album by long press the album or image.\nThe app will show all albums in the phone. User can scroll down or up to view more album.', 'role': 'user', 'name': 'Product_manager'}, {'role': 'system', 'content': "Read the above conversation. Then select the next role from ['User_proxy', 'Business analyst', 'Product_manager'] to play. Only return the role."}] |filtered_list.length=> 4
+=======mingdebug====>after groupchat.py 366=>final= True |name= 
+=======mingdebug533====>speaker=> <autogen.agentchat.assistant_agent.AssistantAgent object at 0x14ea586ac550>
+=======mingdebug====>547 line,repy=> Build a web site for job search.
+It contain three basic function, search/edit/delete job.
+User can create new job by click “new”button.
+When user select a position and drag it to job. User can save the job into the database.
+User can delete the job in the database by long press the job.app will show all jobs in the phone. User can scroll down or up to view more job
+After press enter key on the keyboard. The app will automatically search the result.
+The user input the keyword, select the search range (all jobs, my jobs). Click “search” button get the search list of job.
+When click a job from the search list. User can see detail information of this job.
+Business analyst (to chat_manager):
+
+Build a web site for job search.
+It contain three basic function, search/edit/delete job.
+User can create new job by click “new”button.
+When user select a position and drag it to job. User can save the job into the database.
+User can delete the job in the database by long press the job.app will show all jobs in the phone. User can scroll down or up to view more job
+After press enter key on the keyboard. The app will automatically search the result.
+The user input the keyword, select the search range (all jobs, my jobs). Click “search” button get the search list of job.
+When click a job from the search list. User can see detail information of this job.
+
+--------------------------------------------------------------------------------

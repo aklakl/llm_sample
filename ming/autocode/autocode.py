@@ -7,7 +7,8 @@ import time
 from openai import OpenAI
 import autogen
 from autogen import AssistantAgent, UserProxyAgent, oai
-
+# using datetime module
+import datetime;
 
 
 #===========================================================
@@ -47,8 +48,8 @@ g_task_message="Build the requirement of a Web shopping system(It include User A
 #===========================================================
 
 
-timestamp = time.time()
-print("Timestamp:", timestamp)
+# timestamp = time.time()
+# print("Timestamp:", timestamp)
 #print("config_list_gpt4 =>",config_list_gpt4)
 
 
@@ -266,14 +267,29 @@ def run_openai_vision_example():
     #=======
     print("=====================completed run_openai_vision_example============================")
 
+
+def start_logging():
+    # ct stores current time
+    ct = datetime.datetime.now()
+    #print("current time:-", ct)
+    
+    # ts store timestamp of current time
+    ts = ct.timestamp()
+    #print("timestamp:-", ts)
+    print("=====current time:-",ct,"|timestamp:-",ts)
+    return ts
+
 #Running
 if __name__ == "__main__":
+    start_logging()
     #run_test_print_during()
     #run_test_openai_completion()
     #run_simple_test_autogen();
     #run_openai_vision_example()
     #run_autogen_coder()
     run_autogen_main()
+
+    start_logging()
     print("===========completed=============",__name__)
 
 
