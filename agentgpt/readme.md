@@ -17,5 +17,8 @@ Or use LM Studio build your local LLM => https://lmstudio.ai/
 
 ```
 
+### Installation with agentGPT without sudo permission
+https://www.digizol.com/2017/08/nodejs-install-no-root-sudo-permission-linux-centos.html
+
 
 

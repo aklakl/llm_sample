@@ -7,15 +7,20 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * Build the free LLM based on free resources or locally 
 * Go to Google colab Start the ngrok mapping LiteLLM services => https://drive.google.com/file/d/1IZnVZQJQqLKf_VleM3a5bsfWfKIYfSdE/view?usp=sharing
 * Go to Google colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+* Go to Google colab Start the LiteLLM_HuggingFace local LLM services => => https://colab.research.google.com/github/BerriAI/litellm/blob/main/cookbook/LiteLLM_HuggingFace.ipynb
 * LM Studio build your local LLM => https://lmstudio.ai/
+* Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
 
-
-### Common customized base_url
+### Common customized base_url (continuous updates)
 ```
-base_url = "http://192.168.40.229:1234/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
+http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation
+http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
+
+
+base_url = "http://2.tcp.ngrok.io:10864/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
 base_url = "http://dashing-slowly-kiwi.ngrok-free.app/v1"      #Sidan's ngrok url 
-base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  
+base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 
 
 ```
@@ -228,6 +233,7 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 * Ollama pypi  =>https://pypi.org/project/ollama/
 * Start the LLM Ollama service in PU's Adroit server. Please use instruction => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
 
+
 ```
 #Princeton University Adroit Share folder /scratch/network
 cd /scratch/network/sl6723/
@@ -259,6 +265,16 @@ ls -lah  /scratch/network | grep drwxrwxrwx
 wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg-raccoon-yi-200k-2.0.Q6_K.gguf?download=true
 
 
+```
+
+
+### PU's IAC Workstation
+
+```
+PU's IAC Workstation IP(Sidan's ngrok account)=>128.112.73.83
+ngrok tcp 4321
+tcp://2.tcp.ngrok.io:10864
+http://2.tcp.ngrok.io:10864/v1/models
 ```
 
 ### conda cli
