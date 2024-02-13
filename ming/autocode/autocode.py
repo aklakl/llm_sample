@@ -14,8 +14,8 @@ import datetime;
 #===========================================================
 #This code required openai>1.0.0 (base_url)
 #os.environ["OPENAI_API_KEY"] = "YOUR KEY"
-g_base_url = "http://2.tcp.ngrok.io:10864/v1"  #LM Studio server in PU's IAC lab local IP address is => http://128.112.73.83:1234/v1/models
-#g_base_url = "https://dinner-explosion-whenever-forums.trycloudflare.com/v1"  #LLM services build by Ming-TextGen-GPU=> https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_?usp=sharing
+#g_base_url = "http://2.tcp.ngrok.io:10864/v1"  #LM Studio server in PU's IAC lab local IP address is => http://128.112.73.83:1234/v1/models
+g_base_url = "https://dna-brook-significantly-industry.trycloudflare.com/v1"  #LLM services build by Ming-TextGen-GPU=> https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_?usp=sharing
 g_api_key = "sk-llllllllllllllllllllll"  # even your local don't use the authorization, but you need to fill something, otherwise will be get exception.
 g_api_model="stablelm-zephyr-3b.Q6_K" #stablelm-zephyr-3b.Q6_K.gguf  TheBloke/stablelm-zephyr-3b-GGUF/stablelm-zephyr-3b.Q6_K.gguf
 g_api_model="gpt-3.5-turbo"
@@ -55,7 +55,7 @@ g_task_message="Build the requirement of a Web shopping system(It include User A
 
 
 def run_autogen_main():
-    print("=====================starting run_autogen_main============================")
+    print("=====================starting run_autogen_main============================ use g_base_url=>",g_base_url)
     #print("g_config_list=>",g_config_list)
     #llm_config = {"config_list": config_list_gpt4, "cache_seed": 42}
     llm_config = {"config_list": g_config_list, "cache_seed": 42}
