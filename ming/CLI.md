@@ -12,7 +12,7 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
 
-### Common customized base_url (continuous updates)
+### Commonly customized base_url (continuous updates)
 ```
 http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation Video Adapter	nVIDIA Quadro M5000 (PG400)  
 http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
@@ -30,6 +30,9 @@ base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 ### Common customized model
 ```
 Ollama run saikatkumardey/tinyllama   (Ollama model around 903MB) => refer：https://ollama.ai/saikatkumardey/tinyllama 
+
+
+Current testing model(Average=76.34%)=>https://huggingface.co/CultriX/NeuralTrix-7B-dpo 
 
 
 
