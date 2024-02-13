@@ -268,7 +268,7 @@ wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg
 ```
 
 
-### PU's IAC Workstation
+### PU's IAC Workstation[Video Adapter	nVIDIA Quadro M5000 (PG400) ]
 
 ```
 PU's IAC Workstation IP(Sidan's ngrok account)=>128.112.73.83
