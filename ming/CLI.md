@@ -14,7 +14,7 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 
 ### Common customized base_url (continuous updates)
 ```
-http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation
+http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation Video Adapter	nVIDIA Quadro M5000 (PG400)  
 http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
 
 
@@ -33,7 +33,7 @@ Ollama run saikatkumardey/tinyllama   (Ollama model around 903MB) => refer：htt
 
 
 
-ALL the Tiny models for testing and simple task (Most model come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
+ALL the Tiny models for testing and simple task (Most models come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
 Huggingface Tiny tinyllamas model gguf formating(around 1M refer:https://github.com/ggerganov/llama.cpp/issues/2708) => https://huggingface.co/klosax/tinyllamas-stories-gguf/blob/main/tinyllamas-stories-260k-f32.gguf
 LocalDocs text embeddings model Necessary for LocalDocs feature Used for retrieval augmented generation (RAG)[around 40MB] =>https://gpt4all.io/models/gguf/all-MiniLM-L6-v2-f16.gguf
 Huggingface =>https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
