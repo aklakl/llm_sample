@@ -271,6 +271,23 @@ wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg
 ```
 
 
+```
+20240212-debug in myadroit
+{'error': "'messages' array must only contain objects with a 'content' field that is not empty."}
+conda activate p311 && cd /scratch/network/sl6723/repo/llm_sample/ming/autocode
+nohup python autocode.py >>autocode_log.txt &
+365843
+/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/groupchat.py
+
+
+print("=======mingdebug587====>message[content]=>",message["content"])
+if message["content"] != "":
+print("=======mingdebug589====>message[content]=>",message["content"])
+if message["content"] != "":
+```
+
+
+
 ### PU's IAC Workstation[Video Adapter	nVIDIA Quadro M5000 (PG400) ]
 
 ```
