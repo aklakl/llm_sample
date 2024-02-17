@@ -19,7 +19,7 @@ http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
 
 
 base_url = "http://2.tcp.ngrok.io:10864/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
-base_url = "http://dashing-slowly-kiwi.ngrok-free.app/v1"      #Sidan's ngrok url 
+base_url = "https://suffer-lawyers-d-induced.trycloudflare.com/v1"      #Sidan's ngrok url 
 base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 
 
