@@ -5,21 +5,21 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 
 
 * Build the free LLM based on free resources or locally 
-* Go to Google colab Start the ngrok mapping LiteLLM services => https://drive.google.com/file/d/1IZnVZQJQqLKf_VleM3a5bsfWfKIYfSdE/view?usp=sharing
-* Go to Google colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+* Go to Google Colab Start the ngrok mapping LiteLLM services => https://drive.google.com/file/d/1IZnVZQJQqLKf_VleM3a5bsfWfKIYfSdE/view?usp=sharing
+* Go to Google Colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
 * Go to Google colab Start the LiteLLM_HuggingFace local LLM services => => https://colab.research.google.com/github/BerriAI/litellm/blob/main/cookbook/LiteLLM_HuggingFace.ipynb
 * LM Studio build your local LLM => https://lmstudio.ai/
 * Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
 
-### Common customized base_url (continuous updates)
+### Commonly customized base_url (continuous updates)
 ```
-http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation
+http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation Video Adapter	nVIDIA Quadro M5000 (PG400)  
 http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
 
 
 base_url = "http://2.tcp.ngrok.io:10864/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
-base_url = "http://dashing-slowly-kiwi.ngrok-free.app/v1"      #Sidan's ngrok url 
+base_url = "https://suffer-lawyers-d-induced.trycloudflare.com/v1"      #Sidan's ngrok url 
 base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 
 
@@ -32,9 +32,12 @@ base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 Ollama run saikatkumardey/tinyllama   (Ollama model around 903MB) => refer：https://ollama.ai/saikatkumardey/tinyllama 
 
 
+Current testing model(Average=76.34%)=>https://huggingface.co/CultriX/NeuralTrix-7B-dpo 
 
-ALL the Tiny models for testing and simple task (Most model come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
-Huggingface Tiny tinyllamas model gguf formating(around 1M refer:https://github.com/ggerganov/llama.cpp/issues/2708) => https://huggingface.co/klosax/tinyllamas-stories-gguf/blob/main/tinyllamas-stories-260k-f32.gguf
+
+
+ALL the Tiny models for testing and simple tasks (Most models come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
+Huggingface Tiny tinyllamas model gguf formatting(around 1M refer:https://github.com/ggerganov/llama.cpp/issues/2708) => https://huggingface.co/klosax/tinyllamas-stories-gguf/blob/main/tinyllamas-stories-260k-f32.gguf
 LocalDocs text embeddings model Necessary for LocalDocs feature Used for retrieval augmented generation (RAG)[around 40MB] =>https://gpt4all.io/models/gguf/all-MiniLM-L6-v2-f16.gguf
 Huggingface =>https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 llama-tiny-Synthetic-therapist-GGUF (adapter_model.safetensors file around 49MB) => https://huggingface.co/wesley7137/llama-tiny-Synthetic-therapist-GGUF
@@ -231,7 +234,7 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 ### Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
 * Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
 * Ollama pypi  =>https://pypi.org/project/ollama/
-* Start the LLM Ollama service in PU's Adroit server. Please use instruction => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
+* Start the LLM Ollama service in PU's Adroit server. Please use instructions => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
 
 
 ```
@@ -268,7 +271,24 @@ wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg
 ```
 
 
-### PU's IAC Workstation
+```
+20240212-debug in myadroit
+{'error': "'messages' array must only contain objects with a 'content' field that is not empty."}
+conda activate p311 && cd /scratch/network/sl6723/repo/llm_sample/ming/autocode
+nohup python autocode.py >>autocode_log.txt &
+365843
+/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/groupchat.py
+
+
+print("=======mingdebug587====>message[content]=>",message["content"])
+if message["content"] != "":
+print("=======mingdebug589====>message[content]=>",message["content"])
+if message["content"] != "":
+```
+
+
+
+### PU's IAC Workstation[Video Adapter	nVIDIA Quadro M5000 (PG400) ]
 
 ```
 PU's IAC Workstation IP(Sidan's ngrok account)=>128.112.73.83
