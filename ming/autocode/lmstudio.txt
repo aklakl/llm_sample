@@ -1,0 +1,10 @@
+[2024-02-12 20:19:21.148] [INFO] [LM STUDIO SERVER] Stopping server..
+[2024-02-12 20:19:21.153] [INFO] [LM STUDIO SERVER] Server stopped
+[2024-02-12 20:20:00.830] [INFO] [LM STUDIO SERVER] Verbose server logs are ENABLED
+[2024-02-12 20:20:00.833] [INFO] [LM STUDIO SERVER] Heads up: you've enabled CORS. Make sure you understand the implications
+[2024-02-12 20:20:00.844] [INFO] [LM STUDIO SERVER] Success! HTTP server listening on port 4321
+[2024-02-12 20:20:00.846] [INFO] [LM STUDIO SERVER] Supported endpoints:
+[2024-02-12 20:20:00.847] [INFO] [LM STUDIO SERVER] ->  GET  http://localhost:4321/v1/models
+[2024-02-12 20:20:00.849] [INFO] [LM STUDIO SERVER] ->  POST http://localhost:4321/v1/chat/completions
+[2024-02-12 20:20:00.851] [INFO] [LM STUDIO SERVER] ->  POST http://localhost:4321/v1/completions
+[2024-02-12 20:20:00.853] [INFO] [LM STUDIO SERVER] Logs are saved into C:\tmp\lmstudio-server-log.txt
