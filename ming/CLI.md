@@ -58,6 +58,8 @@ yi-34b-200k-llamafied.Q2_K.gguf = 14.6 GB (around 14.6 GB~36.5 GB) =>https://hug
 SG-Raccoon-Yi-200k model (around 23GB~45GB)[sg-raccoon-yi-200k-2.0.Q2_K.gguf=21.83 GiB(token content=200k)]=>https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF
 Mistral-7B-OpenOrca-GGUF-32k-token-content (around 3.08 GB~7.7GB)=>https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF
 
+Google gemma latest open model=>https://huggingface.co/google/gemma-7b/tree/main
+
 
 stable code =>https://ollama.ai/library/stable-code
 
