@@ -11,6 +11,10 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * LM Studio build your local LLM => https://lmstudio.ai/
 * Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
+* Ming's Colab Notebooks(ming.li@pccnj.org) https://drive.google.com/drive/folders/1_Hs3wRQJCzi2dDkOhWS7Ypf26bMIzjUZ
+* Start the OpenLLM service  open_llm_leaderboard models from =>https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+* Chatbot Arena: Benchmarking LLMs in the Wild(compare the LLM)=>https://chat.lmsys.org
+
 
 ### Commonly customized base_url (continuous updates)
 ```
@@ -57,6 +61,8 @@ Yi-6B-200K content token (2.18 GB~9.94G)=>https://huggingface.co/01-ai/Yi-6B-200
 yi-34b-200k-llamafied.Q2_K.gguf = 14.6 GB (around 14.6 GB~36.5 GB) =>https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF
 SG-Raccoon-Yi-200k model (around 23GB~45GB)[sg-raccoon-yi-200k-2.0.Q2_K.gguf=21.83 GiB(token content=200k)]=>https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF
 Mistral-7B-OpenOrca-GGUF-32k-token-content (around 3.08 GB~7.7GB)=>https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF
+
+Google gemma latest open model=>https://huggingface.co/google/gemma-7b/tree/main
 
 
 stable code =>https://ollama.ai/library/stable-code
