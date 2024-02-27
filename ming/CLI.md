@@ -11,6 +11,10 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * LM Studio build your local LLM => https://lmstudio.ai/
 * Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
+* Ming's Colab Notebooks(ming.li@pccnj.org) https://drive.google.com/drive/folders/1_Hs3wRQJCzi2dDkOhWS7Ypf26bMIzjUZ
+* Start the OpenLLM service  open_llm_leaderboard models from =>https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+* Chatbot Arena: Benchmarking LLMs in the Wild(compare the LLM)=>https://chat.lmsys.org
+
 
 ### Commonly customized base_url (continuous updates)
 ```
