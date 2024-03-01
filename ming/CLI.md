@@ -148,7 +148,7 @@ docker exec -itd  0c50843e44b4 /usr/bin/bash -p 22:22 python:latest -v D:\work\r
 
 
 #How to Create a Docker Image From a Container refer:https://www.dataset.com/blog/create-docker-image/
-#First convert your container to the docker images use => docker commit $YOUR_container_name
+#First convert your container to the docker images using => docker commit $YOUR_container_name
 docker commit ming_llm3
 
 #Retag you just commited the images_id to a real name(Optional)
