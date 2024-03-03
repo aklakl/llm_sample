@@ -9,7 +9,7 @@ In general, we adhere to [Google Python style guide](https://google.github.io/st
 * Go to Google Colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
 * Go to Google colab Start the LiteLLM_HuggingFace local LLM services => => https://colab.research.google.com/github/BerriAI/litellm/blob/main/cookbook/LiteLLM_HuggingFace.ipynb
 * LM Studio build your local LLM => https://lmstudio.ai/
-* Ming's colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
+* Ming's Colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
 
 * Ming's Colab Notebooks(ming.li@pccnj.org) https://drive.google.com/drive/folders/1_Hs3wRQJCzi2dDkOhWS7Ypf26bMIzjUZ
 * Start the OpenLLM service  open_llm_leaderboard models from =>https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
