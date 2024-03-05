@@ -37,7 +37,7 @@ def greet(name):
 demo = gr.Interface(fn=greet, inputs="textbox", outputs="textbox")
     
 if __name__ == "__main__":
-    print("推理页面已开启!")
+    print("A smaple UI with Gradio")
     webbrowser.open(f"http://127.0.0.1:8888")
     demo.launch(share=True, server_port=9999)
 
