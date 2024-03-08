@@ -241,7 +241,8 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 * Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
 * Ollama pypi  =>https://pypi.org/project/ollama/
 * Start the LLM Ollama service in PU's Adroit server. Please use instructions => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
-
+*
+*
 
 ```
 #Princeton University Adroit Share folder /scratch/network
