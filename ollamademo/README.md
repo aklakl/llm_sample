@@ -43,7 +43,7 @@ bash run_ollama.sh
 
 ### Running ollama code Locally 
 
-1. Go to Google colab Start the ngrok mapping litellm server first refer => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+1. Go to Google colab Start the ngrok mapping litellm server first refer => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_
 Or use LM Studio build your local LLM => https://lmstudio.ai/
 
 
