@@ -281,6 +281,7 @@ wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg
 ```
 20240212-debug in myadroit
 {'error': "'messages' array must only contain objects with a 'content' field that is not empty."}
+Quick command line install Miniconda=>https://docs.anaconda.com/free/miniconda/
 conda activate p311 && cd /scratch/network/sl6723/repo/llm_sample/ming/autocode
 nohup python autocode.py >>autocode_log.txt &
 365843
