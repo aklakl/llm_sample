@@ -3,7 +3,7 @@
 * Ming's Colab text-generation-webui => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_
 * Text-generation-webui official github => https://github.com/oobabooga/text-generation-webui
 * Atinoda github => https://github.com/Atinoda/text-generation-webui-docker
-
+* Atinoda dockerhub image tags => https://hub.docker.com/r/atinoda/text-generation-webui/tags
 
 
 ### One-click-installer with github repo
