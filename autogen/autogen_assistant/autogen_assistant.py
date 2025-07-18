@@ -14,7 +14,7 @@ import openai
 #base_url = "http://localhost:1234/v1"  # You can specify API base URLs if needed. eg: localhost:8000
 #http://10.9.150.174:1234/v1/models
 base_url = "http://192.168.40.229:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
-#base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
+#base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  ag2==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
 api_type = "openai"  # Type of API, e.g., "openai" or "aoai".
 api_version = None  # Specify API version if needed.
 #api_model= "palm/chat-biso"
@@ -111,15 +111,15 @@ def run_openai_completion():
 
 
 
-#=============autogen run_autogen_with_twoagent_pyautogen_latest_version=============
-#refer:https://pypi.org/project/pyautogen/0.1.14/
+#=============autogen run_autogen_with_twoagent_ag2_latest_version=============
+#refer:https://pypi.org/project/ag2/0.1.14/
 '''
 This code required the dependency follow these(also pay attention with api_base and api_key and api_model) :
-pip install openai==0.28  pyautogen==0.1.14 
+pip install openai==0.28  ag2==0.1.14 
 '''
-def run_autogen_with_twoagent_pyautogen_latest_version():
+def run_autogen_with_twoagent_ag2_latest_version():
     try:
-        #Base on openai==0.28  pyautogen==0.1.14 ,If you want to use your own LLM,you must be override your openai.api_base and openai.api_key for autogen, otherwise won't be work.
+        #Base on openai==0.28  ag2==0.1.14 ,If you want to use your own LLM,you must be override your openai.api_base and openai.api_key for autogen, otherwise won't be work.
         openai.api_key = api_key  # supply your API key however you choose
         openai.api_base= base_url # supply your api base URL If you have your own LLM
         assistant = AssistantAgent("assistant", llm_config={"api_key":api_key,"base_url": base_url,"api_model":api_model})
@@ -128,7 +128,7 @@ def run_autogen_with_twoagent_pyautogen_latest_version():
         user_proxy.initiate_chat(assistant, message="Plot a chart of NVDA and TESLA stock price change YTD.")
         # This triggers automated chat to solve the task
     except Exception as e:
-        print(f"""run_autogen_with_twoagent_pyautogen_latest_version failed with Exception{e}. \n""")   
+        print(f"""run_autogen_with_twoagent_ag2_latest_version failed with Exception{e}. \n""")   
 # ##====================================================
 
 
@@ -155,7 +155,7 @@ def run_autogen_with_twoagent_pyautogen_latest_version():
 # and OAI_CONFIG_LIST_sample
 '''
 This code required the dependency follow these(also pay attention with config_list.api_base and config_list.api_key and config_list.api_model) :
-pip install openai==0.28  pyautogen==0.1.14 
+pip install openai==0.28  ag2==0.1.14 
 '''
 def run_autogen_with_twoagent():
     config_list = [
@@ -185,7 +185,7 @@ def run_autogen_with_twoagent():
 #========================run_autogen_with_Assistant_and_userProxy============================
 '''
 This code required the dependency follow these(also pay attention with config_list.api_base and config_list.api_key and config_list.api_model) :
-pip install openai==0.28  pyautogen==0.1.14 
+pip install openai==0.28  ag2==0.1.14 
 '''
 def run_autogen_with_Assistant_and_userProxy():
     try:
@@ -227,4 +227,4 @@ if __name__ == "__main__":
     #run_autogen_with_Assistant_and_userProxy()
     #run_autogen_with_twoagent()
     #run_openai_completion()
-    run_autogen_with_twoagent_pyautogen_latest_version()
+    run_autogen_with_twoagent_ag2_latest_version()

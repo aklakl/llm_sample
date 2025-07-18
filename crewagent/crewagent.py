@@ -20,7 +20,7 @@ search_tool = DuckDuckGoSearchRun()
 #os.environ["OPENAI_API_KEY"] = "YOUR KEY"
 g_base_url = "http://192.168.137.176:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
 g_api_key = "sk-llllllllllllllllllllll"  # even your local don't use the authorization, but you need to fill something, otherwise will be get exception.
-#g_base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
+#g_base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  ag2==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
 #g_api_model="NousResearch--Nous-Hermes-llama-2-7b"
 g_api_model="TinyLlama--TinyLlama-1.1B-Chat-v1.0"
 os.environ["OPENAI_API_KEY"] = g_api_key
