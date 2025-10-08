@@ -224,6 +224,10 @@ netstat -aptn | grep '8000\|11434'
 
 
 
+vi /scratch/network/sl6723/repo/llm_sample/litellm/config/config.yaml
+
+
+
 #Quota limit warning for /home/sl6723    Using 10 GB of quota 10 GB. Consider deleting or archiving files to free up disk space. If you cannot free up enough space you can request more on this website: https://forms.rc.princeton.edu/quota
 #Check your Storage Quota   refer:https://myadroit.princeton.edu/pun/sys/quota
 du -sh  /home/sl6723  && du -h --max-depth=1 /home/sl6723 | sort -n -r | head -n 10  

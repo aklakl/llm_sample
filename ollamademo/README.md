@@ -60,6 +60,8 @@ source ollamademoenv/bin/activate
 
 python llm_sample/ollamademo/ollamademo.py
 
+tail -f /scratch/network/sl6723/repo/llm_sample/ollamademo/ollamaServices.log
+
 ```
 
 
