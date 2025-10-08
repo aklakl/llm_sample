@@ -1,28 +1,47 @@
-* Ming's CLI
+# Ming's CLI
 
 ### Coding Style Guide
 In general, we adhere to [Google Python style guide](https://google.github.io/styleguide/pyguide.html).
 
 
-* Common customized base_url
+* Build the free LLM based on free resources or locally 
+* Go to Google Colab Start the ngrok mapping LiteLLM services => https://drive.google.com/file/d/1IZnVZQJQqLKf_VleM3a5bsfWfKIYfSdE/view?usp=sharing
+* Go to Google Colab Start the ngrok mapping the TextGen LLM services => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+* Go to Google colab Start the LiteLLM_HuggingFace local LLM services => => https://colab.research.google.com/github/BerriAI/litellm/blob/main/cookbook/LiteLLM_HuggingFace.ipynb
+* LM Studio build your local LLM => https://lmstudio.ai/
+* Ming's Colab => https://drive.google.com/drive/folders/1EntHN0llufYhc7OK0r4Ksranu9vNp6FZ
+
+* Ming's Colab Notebooks(ming.li@pccnj.org) https://drive.google.com/drive/folders/1_Hs3wRQJCzi2dDkOhWS7Ypf26bMIzjUZ
+* Start the OpenLLM service  open_llm_leaderboard models from =>https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+* Chatbot Arena: Benchmarking LLMs in the Wild(compare the LLM)=>https://chat.lmsys.org
+
+
+### Commonly customized base_url (continuous updates)
 ```
-base_url = "http://192.168.40.229:1234/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
-base_url = "http://dashing-slowly-kiwi.ngrok-free.app/v1"      #Sidan's ngrok url 
-base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  
+http://2.tcp.ngrok.io:10864/v1/models     //IAC Workstation Video Adapter	nVIDIA Quadro M5000 (PG400)  
+http://2.tcp.ngrok.io:13850/v1/models     //Mac Pro
+
+
+base_url = "http://2.tcp.ngrok.io:10864/v1"      #Sidan's local Server Mistral-7B-Instruct-v0.1-GGUF/mistral-7b-instruct-v0.1.Q8_0.gguf
+base_url = "https://suffer-lawyers-d-induced.trycloudflare.com/v1"      #Sidan's ngrok url 
+base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  #Ming's ngrok url
 
 
 ```
 
 
 
-* Common customized model
+### Common customized model
 ```
 Ollama run saikatkumardey/tinyllama   (Ollama model around 903MB) => refer：https://ollama.ai/saikatkumardey/tinyllama 
 
 
+Current testing model(Average=76.34%)=>https://huggingface.co/CultriX/NeuralTrix-7B-dpo 
 
-ALL the Tiny models for testing and simple task (Most model come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
-Huggingface Tiny tinyllamas model gguf formating(around 1M refer:https://github.com/ggerganov/llama.cpp/issues/2708) => https://huggingface.co/klosax/tinyllamas-stories-gguf/blob/main/tinyllamas-stories-260k-f32.gguf
+
+
+ALL the Tiny models for testing and simple tasks (Most models come from Huggingface)[PS: Tiny-Vicuna-1B-GGUF is working as well in colab]
+Huggingface Tiny tinyllamas model gguf formatting(around 1M refer:https://github.com/ggerganov/llama.cpp/issues/2708) => https://huggingface.co/klosax/tinyllamas-stories-gguf/blob/main/tinyllamas-stories-260k-f32.gguf
 LocalDocs text embeddings model Necessary for LocalDocs feature Used for retrieval augmented generation (RAG)[around 40MB] =>https://gpt4all.io/models/gguf/all-MiniLM-L6-v2-f16.gguf
 Huggingface =>https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 llama-tiny-Synthetic-therapist-GGUF (adapter_model.safetensors file around 49MB) => https://huggingface.co/wesley7137/llama-tiny-Synthetic-therapist-GGUF
@@ -30,16 +49,20 @@ LinguaMatic-Tiny-GGUF (Around 483MB~904MB) => https://huggingface.co/erfanzar/Li
 Tiny-Vicuna-1B-GGUF (around 482MB~1.17G) => https://huggingface.co/afrideva/Tiny-Vicuna-1B-GGUF
 TinyLlama-1.1B-Chat-v0.3-GGUF(around 482MB~1.17G)  => https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF   (Huggingface-API https://huggingface.co/api/models/TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF/   TinyLlama introduction=>https://youtu.be/T5l228844NI)
 TinyLlama-1.1B-1T-OpenOrca-GGUF(around 482MB~1.17G) => https://huggingface.co/TheBloke/TinyLlama-1.1B-1T-OpenOrca-GGUF
-Offical TinyLlama (ggml-model-q4_0.gguf 637 MB）=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v0.2-GGUF
-Offical code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-python-v0.1
+Official TinyLlama (ggml-model-q4_0.gguf 637 MB）=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v0.2-GGUF
+Official code TinyLlama with python (ggml-model-q4_0.gguf 637 MB)=> https://huggingface.co/TinyLlama/TinyLlama-1.1B-python-v0.1
 Huggingface tinyllamas  （bin file style around 438 MB） => https://huggingface.co/karpathy/tinyllamas
 
+Huggingface Vision Models (GGUF)=>https://huggingface.co/collections/lmstudio-ai/vision-models-gguf-6577e1ce821f439498ced0c1
 
-more than 4K content token 
+
+More than 4K content token 
 Yi-6B-200K content token (2.18 GB~9.94G)=>https://huggingface.co/01-ai/Yi-6B-200K
 yi-34b-200k-llamafied.Q2_K.gguf = 14.6 GB (around 14.6 GB~36.5 GB) =>https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF
 SG-Raccoon-Yi-200k model (around 23GB~45GB)[sg-raccoon-yi-200k-2.0.Q2_K.gguf=21.83 GiB(token content=200k)]=>https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF
 Mistral-7B-OpenOrca-GGUF-32k-token-content (around 3.08 GB~7.7GB)=>https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF
+
+Google gemma latest open model=>https://huggingface.co/google/gemma-7b/tree/main
 
 
 stable code =>https://ollama.ai/library/stable-code
@@ -56,7 +79,7 @@ LiteLLM-huggingface use default=huggingface/bigcode/starcoder    (PS:Required HF
 
 
 
-* Testing bash shell
+### Testing bash shell
 ```
 curl http://192.168.0.232:3000/v1/chat/completions \
   -H "Content-Type: application/json" \
@@ -70,7 +93,7 @@ curl http://192.168.0.232:3000/v1/chat/completions \
 
 
 
-* Testing the OpenLLM
+### Testing the OpenLLM
 ```
 export OPENLLM_ENDPOINT=http://192.168.0.232:3000
 openllm query 'What are large language models?'
@@ -83,7 +106,7 @@ openllm query 'What are large language models?'
 
 
 
-* OpenAI and Local access URL
+### OpenAI and Local access URL
 ```
 http://192.168.0.232:1234/v1/models
 http://192.168.0.232:1234/metrics
@@ -101,7 +124,7 @@ https://api.openai.com/v1/models
 
 
 
-* common docker command line
+### common docker command line
 ```
 docker pull python
 docker image ls
@@ -125,7 +148,7 @@ docker exec -itd  0c50843e44b4 /usr/bin/bash -p 22:22 python:latest -v D:\work\r
 
 
 #How to Create a Docker Image From a Container refer:https://www.dataset.com/blog/create-docker-image/
-#First convert your container to the docker images use => docker commit $YOUR_container_name
+#First convert your container to the docker images using => docker commit $YOUR_container_name
 docker commit ming_llm3
 
 #Retag you just commited the images_id to a real name(Optional)
@@ -137,7 +160,7 @@ docker push mingli512/ming_llm:latest
 ```
 
 
-* My local path
+### My local path
 ```
 cd D:\work\repo\tmp\mingwork
 
@@ -145,7 +168,7 @@ cd D:\work\repo\tmp\mingwork
 
 
 
-* Sidan's server CLI
+### Sidan's server CLI
 ```
 ssh sl6723@192.168.0.232
 echo $OSTYPE - $(uname -srm)
@@ -162,6 +185,11 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gp
 ngrok config add-authtoken $Your_token
 ngrok http --domain=airedale-native-chicken.ngrok-free.app 9000
 ngrok http --domain=dashing-slowly-kiwi.ngrok-free.app 1234
+
+ngrok tcp 9000
+cloudflared tunnel --url localhost:11434/
+
+
 
 ===
 docker pull litellm/ollama
@@ -209,18 +237,30 @@ docker run   --name ming_ollama4 -v /Users/sl6723/Documents/Ming/:/home python:l
 
 
 
-* Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
-Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
-Ollama pypi  =>https://pypi.org/project/ollama/
+### Princeton University Adroit temporary environment => https://myadroit.princeton.edu/pun/sys/dashboard
+* Princeton University Adroit  VS IDE => https://myadroit.princeton.edu/pun/sys/dashboard/batch_connect/sessions
+* Ollama pypi  =>https://pypi.org/project/ollama/
+* Start the LLM Ollama service in PU's Adroit server. Please use instructions => https://github.com/aklakl/llm_sample/blob/master/ollamademo/README.md
+*
+*
 
 ```
 #Princeton University Adroit Share folder /scratch/network
 cd /scratch/network/sl6723/
-cd /home/sl6723/repo/llm_sample
+cd /scratch/network/sl6723/repo/llm_sample/ming   
 cd /home/sl6723/.ollama/models
+cd /scratch/network/sl6723/repo/llm_sample/ollamademo && bash run_ollama.sh
 
 ps -ef | grep 'cloudflared\|ollama\|ngrok\|litellm'
 netstat -aptn | grep '8000\|11434'
+
+#Start the LiteLLM with Ollama
+cd /scratch/network/sl6723/tmp/proc
+ollama serve >>ollama.log &
+ollama pull dolphin-phi
+ollama run dolphin-phi >>dolphin-phi.log &
+litellm --model ollama/dolphin-phi >>litellm.log &
+cloudflared tunnel --url localhost:8000/ >>cloudflared.log &
 
 
 
@@ -239,5 +279,40 @@ ls -lah  /scratch/network | grep drwxrwxrwx
 wget https://huggingface.co/TheBloke/SG-Raccoon-Yi-200k-2.0-GGUF/resolve/main/sg-raccoon-yi-200k-2.0.Q6_K.gguf?download=true
 
 
+```
+
+
+```
+20240212-debug in myadroit
+{'error': "'messages' array must only contain objects with a 'content' field that is not empty."}
+Quick command line install Miniconda=>https://docs.anaconda.com/free/miniconda/
+conda activate p311 && cd /scratch/network/sl6723/repo/llm_sample/ming/autocode
+nohup python autocode.py >>autocode_log.txt &
+365843
+/home/sl6723/miniconda3/envs/p311/lib/python3.11/site-packages/autogen/agentchat/groupchat.py
+
+
+print("=======mingdebug587====>message[content]=>",message["content"])
+if message["content"] != "":
+print("=======mingdebug589====>message[content]=>",message["content"])
+if message["content"] != "":
+```
+
+
+
+### PU's IAC Workstation[Video Adapter	nVIDIA Quadro M5000 (PG400) ]
+
+```
+PU's IAC Workstation IP(Sidan's ngrok account)=>128.112.73.83
+ngrok tcp 4321
+tcp://2.tcp.ngrok.io:10864
+http://2.tcp.ngrok.io:10864/v1/models
+```
+
+### conda cli
+
+```
+#refer:https://docs.conda.io/projects/conda/en/latest/commands/clean.html
+conda clean --all 
 
 ```

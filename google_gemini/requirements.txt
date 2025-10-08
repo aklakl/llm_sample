@@ -1,0 +1,2 @@
+#Requirements File Format refer:https://pip.pypa.io/en/stable/reference/requirements-file-format/
+repo/llm_sample/sdxl/requirements.txt

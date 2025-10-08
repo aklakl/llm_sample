@@ -1,3 +1,17 @@
+
+
+
+
+--------------------------------------------------------------------------------
+autogen- use LLM studio service will get the error
+BadRequestError: Error code: 400 - {'error': "'messages' array must only contain objects with a 'content' field that is not empty."}=>https://github.com/microsoft/autogen/issues/842
+
+
+
+
+
+
+--------------------------------------------------------------------------------
 (pyautogen) root@1cfeec487615:/home/tmp/mingwork/llm_sample# python autogen/multiagents_groupchat/multiagents_groupchat.py
 ====================
 openai.Model.list=> {

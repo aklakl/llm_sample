@@ -1,4 +1,4 @@
-# The code with ollama using pip
+# The code with ollama using pip(Ollama binds 127.0.0.1 port 11434 by default)
 
 ```
 
@@ -41,13 +41,14 @@ bash run_ollama.sh
 
 
 
-### Running Locally 
+### Running ollama code Locally 
 
-1. Go to Google colab Start the ngrok mapping litellm server first refer => https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_   
+1. Go to Google colab Start the ngrok mapping litellm server first refer => 
+[colab](https://colab.research.google.com/drive/1-pUeLBWvsh0M82OhaXivZigVhtJKhPm_)
 Or use LM Studio build your local LLM => https://lmstudio.ai/
 
 
-2. Run your code local machine:
+3. Run your code local machine:
 ```
 export OPENAI_API_KEY=sk-1111111111111111111
 export OPENAI_API_BASE=http://airedale-native-chicken.ngrok-free.app/v1

@@ -3,6 +3,7 @@ import ollama
 print("ollama lib=>",ollama)
 #refer:https://pypi.org/project/ollama/
 def run_ollama():
+    print("===================starting run run_ollama===================")
     response = ollama.chat(model='phi', messages=[{'role': 'user', 'content': 'Why is the sky blue?'}])
     print("response=>",response)
 

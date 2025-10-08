@@ -25,9 +25,12 @@ python llm_sample/ming/autocode/autocode.py
 
 
 ```
+### Running AutoGen version
 
+```
+https://colab.research.google.com/drive/11ju2Hg0GmjVyxEBsQ30FiwdZyugANHP1?usp=sharing
 
-
+```
 
 
 =====
@@ -58,6 +61,8 @@ MetaGPT?
 
 
 
+
+
 Undo task:
 1.Find any agent framework can be more flexable
 ANSWER:So far seems like langchain is more flexable compare to AutoGen、CrewAI、MetaGPT
@@ -69,4 +74,7 @@ Done--2.Provide 4k token content model.
 ANSWER:Yi models support up to 200k context (you have to download the 200k models specifically). Mistral/Mixtral supports up to 32k.Llama 2-7B also support 4k  context
 refer:https://www.reddit.com/r/LocalLLaMA/comments/18moo27/recommendations_on_locally_runnable_llms_with/
 3.
+
+
+
 

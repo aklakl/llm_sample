@@ -1,4 +1,4 @@
-# The code with litellm 
+# The code with LiteLLM (LiteLLM binds 127.0.0.1 port 8000 by default)
 
 ```
 
@@ -10,7 +10,7 @@ litellm pip => https://pypi.org/project/litellm/
 
 ```
 
-### Install litellm
+### Install LiteLLM
 
 Suppose you don't have sudo permissions. you can install Ollama with source code as well. Please refer:https://github.com/jmorganca/ollama?tab=readme-ov-file#building
 

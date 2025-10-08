@@ -1,0 +1,14 @@
+
+
+
+================================================================
+==refer:https://github.com/vllm-project/vllm/issues/2418
+==Solution could be 
+```
+vllm/config.py: 104
+# self.max_model_len = _get_and_verify_max_len(self.hf_config,
+# max_model_len)
+self.max_model_len = 4096
+```
+
+ValueError: The model's max seq len (2048) is larger than the maximum number of tokens that can be stored in KV cache (176). Try increasing gpu_memory_utilizationor decreasingmax_model_len when initializing the engine.
