@@ -1,0 +1,240 @@
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ python3
+bash: python3: command not found
+(base) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ conda create --name google-computer
+Channels:
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\Users\mingl\.conda\envs\google-computer
+
+
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate google-computer
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ conda activate google-computer
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ python
+bash: python: command not found
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ conda activate
+(base) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ conda activate google-computer
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ python
+Python 3.11.13 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:03:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> ^Z
+
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample (master)
+$ cd computer-use-preview
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample/computer-use-preview (master)
+$ pip install -r requirements.txt
+Collecting termcolor==3.1.0 (from -r requirements.txt (line 1))
+  Downloading termcolor-3.1.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting pydantic==2.11.4 (from -r requirements.txt (line 2))
+  Downloading pydantic-2.11.4-py3-none-any.whl.metadata (66 kB)
+Collecting google-genai>=1.40.0 (from -r requirements.txt (line 3))
+  Downloading google_genai-1.41.0-py3-none-any.whl.metadata (45 kB)
+Collecting playwright==1.52.0 (from -r requirements.txt (line 4))
+  Downloading playwright-1.52.0-py3-none-win_amd64.whl.metadata (3.5 kB)
+Collecting browserbase==1.3.0 (from -r requirements.txt (line 5))
+  Downloading browserbase-1.3.0-py3-none-any.whl.metadata (15 kB)
+Collecting rich (from -r requirements.txt (line 6))
+  Downloading rich-14.1.0-py3-none-any.whl.metadata (18 kB)
+Collecting pytest (from -r requirements.txt (line 7))
+  Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+Collecting annotated-types>=0.6.0 (from pydantic==2.11.4->-r requirements.txt (line 2))
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.33.2 (from pydantic==2.11.4->-r requirements.txt (line 2))
+  Downloading pydantic_core-2.33.2-cp311-cp311-win_amd64.whl.metadata (6.9 kB)
+Collecting typing-extensions>=4.12.2 (from pydantic==2.11.4->-r requirements.txt (line 2))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.0 (from pydantic==2.11.4->-r requirements.txt (line 2))
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting pyee<14,>=13 (from playwright==1.52.0->-r requirements.txt (line 4))
+  Downloading pyee-13.0.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting greenlet<4.0.0,>=3.1.1 (from playwright==1.52.0->-r requirements.txt (line 4))
+  Downloading greenlet-3.2.4-cp311-cp311-win_amd64.whl.metadata (4.2 kB)
+Collecting anyio<5,>=3.5.0 (from browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting distro<2,>=1.7.0 (from browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting httpx<1,>=0.23.0 (from browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting sniffio (from browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting idna>=2.8 (from anyio<5,>=3.5.0->browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting certifi (from httpx<1,>=0.23.0->browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.23.0->browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.23.0->browserbase==1.3.0->-r requirements.txt (line 5))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting google-auth<3.0.0,>=2.14.1 (from google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading google_auth-2.41.1-py2.py3-none-any.whl.metadata (6.6 kB)
+Collecting requests<3.0.0,>=2.28.1 (from google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting tenacity<9.2.0,>=8.2.3 (from google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading tenacity-9.1.2-py3-none-any.whl.metadata (1.2 kB)
+Collecting websockets<15.1.0,>=13.0.0 (from google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading websockets-15.0.1-cp311-cp311-win_amd64.whl.metadata (7.0 kB)
+Collecting cachetools<7.0,>=2.0.0 (from google-auth<3.0.0,>=2.14.1->google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading cachetools-6.2.0-py3-none-any.whl.metadata (5.4 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth<3.0.0,>=2.14.1->google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting rsa<5,>=3.1.4 (from google-auth<3.0.0,>=2.14.1->google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.28.1->google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading charset_normalizer-3.4.3-cp311-cp311-win_amd64.whl.metadata (37 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.28.1->google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting pyasn1>=0.1.3 (from rsa<5,>=3.1.4->google-auth<3.0.0,>=2.14.1->google-genai>=1.40.0->-r requirements.txt (line 3))
+  Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->-r requirements.txt (line 6))
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->-r requirements.txt (line 6))
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting colorama>=0.4 (from pytest->-r requirements.txt (line 7))
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting iniconfig>=1 (from pytest->-r requirements.txt (line 7))
+  Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting packaging>=20 (from pytest->-r requirements.txt (line 7))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy<2,>=1.5 (from pytest->-r requirements.txt (line 7))
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->-r requirements.txt (line 6))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading termcolor-3.1.0-py3-none-any.whl (7.7 kB)
+Downloading pydantic-2.11.4-py3-none-any.whl (443 kB)
+Downloading playwright-1.52.0-py3-none-win_amd64.whl (34.8 MB)
+   ---------------------------------------- 34.8/34.8 MB 9.8 MB/s  0:00:03
+Downloading browserbase-1.3.0-py3-none-any.whl (97 kB)
+Downloading pydantic_core-2.33.2-cp311-cp311-win_amd64.whl (2.0 MB)
+   ---------------------------------------- 2.0/2.0 MB 12.0 MB/s  0:00:00
+Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading greenlet-3.2.4-cp311-cp311-win_amd64.whl (299 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading pyee-13.0.0-py3-none-any.whl (15 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading google_genai-1.41.0-py3-none-any.whl (245 kB)
+Downloading google_auth-2.41.1-py2.py3-none-any.whl (221 kB)
+Downloading cachetools-6.2.0-py3-none-any.whl (11 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.3-cp311-cp311-win_amd64.whl (107 kB)
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+Downloading tenacity-9.1.2-py3-none-any.whl (28 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Downloading websockets-15.0.1-cp311-cp311-win_amd64.whl (176 kB)
+Downloading rich-14.1.0-py3-none-any.whl (243 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ---------------------------------------- 1.2/1.2 MB 15.5 MB/s  0:00:00
+Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Installing collected packages: websockets, urllib3, typing-extensions, termcolor, tenacity, sniffio, pygments, pyasn1, pluggy, packaging, mdurl, iniconfig, idna, h11, greenlet, distro, colorama, charset_normalizer, certifi, cachetools, annotated-types, typing-inspection, rsa, requests, pytest, pyee, pydantic-core, pyasn1-modules, markdown-it-py, httpcore, anyio, rich, pydantic, playwright, httpx, google-auth, google-genai, browserbase
+Successfully installed annotated-types-0.7.0 anyio-4.11.0 browserbase-1.3.0 cachetools-6.2.0 certifi-2025.10.5 charset_normalizer-3.4.3 colorama-0.4.6 distro-1.9.0 google-auth-2.41.1 google-genai-1.41.0 greenlet-3.2.4 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.10 iniconfig-2.1.0 markdown-it-py-4.0.0 mdurl-0.1.2 packaging-25.0 playwright-1.52.0 pluggy-1.6.0 pyasn1-0.6.1 pyasn1-modules-0.4.2 pydantic-2.11.4 pydantic-core-2.33.2 pyee-13.0.0 pygments-2.19.2 pytest-8.4.2 requests-2.32.5 rich-14.1.0 rsa-4.9.1 sniffio-1.3.1 tenacity-9.1.2 termcolor-3.1.0 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.5.0 websockets-15.0.1
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample/computer-use-preview (master)
+$ playwright install-deps chrome
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample/computer-use-preview (master)
+$ playwright install chrome
+Failed to install browsers
+Error:
+╔═════════════════════════════════════════════════════════════════╗
+║ ATTENTION: "chrome" is already installed on the system!         ║
+║                                                                 ║
+║ "chrome" installation is not hermetic; installing newer version ║
+║ requires *removal* of a current installation first.             ║
+║                                                                 ║
+║ To *uninstall* current version and re-install latest "chrome":  ║
+║                                                                 ║
+║ - Close all running instances of "chrome", if any               ║
+║ - Use "--force" to install browser:                             ║
+║                                                                 ║
+║     playwright install --force chrome                           ║
+║                                                                 ║
+║ <3 Playwright Team                                              ║
+╚═════════════════════════════════════════════════════════════════╝
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample/computer-use-preview (master)
+$ playwright install chrome
+Failed to install browsers
+Error:
+╔═════════════════════════════════════════════════════════════════╗
+║ ATTENTION: "chrome" is already installed on the system!         ║
+║                                                                 ║
+║ "chrome" installation is not hermetic; installing newer version ║
+║ requires *removal* of a current installation first.             ║
+║                                                                 ║
+║ To *uninstall* current version and re-install latest "chrome":  ║
+║                                                                 ║
+║ - Close all running instances of "chrome", if any               ║
+║ - Use "--force" to install browser:                             ║
+║                                                                 ║
+║     playwright install --force chrome                           ║
+║                                                                 ║
+║ <3 Playwright Team                                              ║
+╚═════════════════════════════════════════════════════════════════╝
+(google-computer)
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample/computer-use-preview (master)
+$ playwright install --force chrome
+Downloading Google Chrome
+Installing Google Chrome
+
+ProductVersion   FileVersion      FileName
+--------------   -----------      --------
+140.0.7339.207   140.0.7339.207   C:\Program Files\Google\Chrome\Application\chrome.exe
+
+
+Downloading FFMPEG playwright build v1011 from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-win64.zip
+1.3 MiB [====================] 100% 0.0s
+FFMPEG playwright build v1011 downloaded to C:\Users\mingl\AppData\Local\ms-playwright\ffmpeg-1011
+Downloading Winldd playwright build v1007 from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip
+0.1 MiB [====================] 100% 0.0s
+Winldd playwright build v1007 downloaded to C:\Users\mingl\AppData\Local\ms-playwright\winldd-1007
+(google-computer) 
+mingl@ming MINGW64 /d/work/repo/tmp/mingwork/llm_sample/computer-use-preview (master)
+$
