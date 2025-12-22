@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LinkedIn 智能求职助手</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+      width: 350px;
+      padding: 16px;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h2 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      color: #333;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon {
+      font-size: 18px;
+    }
+
+    input[type='text'] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+      font-family: inherit;
+    }
+
+    input[type='text']:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    button {
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background: #e0e0e0;
+    }
+
+    .info-box {
+      background: #f0f7ff;
+      border-left: 4px solid #667eea;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+      color: #333;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .info-box strong {
+      color: #667eea;
+    }
+
+    .status {
+      text-align: center;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e0e0e0;
+      margin: 12px 0;
+    }
+
+    .settings-link {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .settings-link a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      opacity: 0.9;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .settings-link a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h2>🚀 LinkedIn 智能求职助手</h2>
+    <p>AI自动化申请，让求职更简单</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">🎯</span>
+      <span>职位搜索</span>
+    </div>
+    <input type="text" id="job-title" placeholder="输入职位名称，例如：软件工程师" value="Senior backend engineer">
+
+    <div class="button-group">
+      <button id="start-smart-apply" class="btn-primary">
+        <span>✨</span>
+        <span>智能自动申请</span>
+      </button>
+      <button id="manual-search" class="btn-secondary">
+        <span>🔍</span>
+        <span>仅打开搜索页</span>
+      </button>
+    </div>
+
+    <div class="info-box">
+      <strong>💡 工作流程：</strong><br>
+      1️⃣ 自动打开LinkedIn搜索<br>
+      2️⃣ 应用Easy Apply筛选<br>
+      3️⃣ 依次申请匹配的职位<br>
+      4️⃣ 使用您的简历自动填表
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">📄</span>
+      <span>当前页面快速申请</span>
+    </div>
+    <button id="apply-current-page" class="btn-secondary">
+      <span>⚡</span>
+      <span>申请此职位</span>
+    </button>
+    <div style="margin-top: 8px; color: #666; font-size: 11px; text-align: center;">
+      适用于已打开的LinkedIn职位详情页
+    </div>
+  </div>
+
+  <div class="settings-link">
+    <a href="#" id="open-options">
+      <span>⚙️</span>
+      <span>设置简历</span>
+    </a>
+  </div>
+
+  <div class="status" id="status-message" style="display: none;"></div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+# Node.js and dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.env
+
+# Build artifacts
+build/
+dist/
+out/
+
+# Chrome Extension specific
+*.pem
+*.zip
+*.crx
+
+# OS and Editor files
+.DS_Store
+.vscode/
