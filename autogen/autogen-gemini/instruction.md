@@ -12,10 +12,10 @@ Google Gemini API=>https://cloud.google.com/vertex-ai/docs/generative-ai/multimo
 2. Run your code local machine:
 
 ```
-python3.11 -m venv pyautogen
-source pyautogen/bin/activate
+python3.11 -m venv ag2
+source ag2/bin/activate
 # deactivate
-pip install pyautogen google-generativeai
+pip install ag2 google-generativeai
 pip install -q google-generativeai
 
 python autogen/autogen-gemini/autogen_gemini.py

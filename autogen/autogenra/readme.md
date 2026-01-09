@@ -12,13 +12,13 @@ Or use LM Studio build your local LLM => https://lmstudio.ai/
 
 2. Run your code local machine:
 ```
-python3.12 -m venv pyautogen
-source pyautogen/bin/activate
+python3.12 -m venv ag2
+source ag2/bin/activate
 # deactivate
 # old version with between Aug 2023 and Oct 2023
-pip install openai==0.28  pyautogen==0.1.14  
+pip install openai==0.28  ag2==0.1.14  
 # latest 
-pip install openai==1.6.1 pyautogen==0.2.3 
+pip install openai==1.6.1 ag2==0.2.3 
 
 pip install -r requirements.txt
 

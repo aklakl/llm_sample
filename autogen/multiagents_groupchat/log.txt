@@ -12,7 +12,7 @@ BadRequestError: Error code: 400 - {'error': "'messages' array must only contain
 
 
 --------------------------------------------------------------------------------
-(pyautogen) root@1cfeec487615:/home/tmp/mingwork/llm_sample# python autogen/multiagents_groupchat/multiagents_groupchat.py
+(ag2) root@1cfeec487615:/home/tmp/mingwork/llm_sample# python autogen/multiagents_groupchat/multiagents_groupchat.py
 ====================
 openai.Model.list=> {
   "data": [
@@ -180,4 +180,4 @@ user_proxy (to chat_manager):
 --------------------------------------------------------------------------------
 ==========completed run_agentchat_multiagents_groupchat=============
 
-(pyautogen) root@1cfeec487615:/home/tmp/mingwork/llm_sample# 
+(ag2) root@1cfeec487615:/home/tmp/mingwork/llm_sample# 

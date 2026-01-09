@@ -7,8 +7,8 @@ from autogen import AssistantAgent, UserProxyAgent, config_list_from_json, oai
 import openai
 
 
-#Initial your Custom llm_config configurations,LM Studio Server support SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
-# base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  pyautogen==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
+#Initial your Custom llm_config configurations,LM Studio Server support SKD is openai==0.28  ag2==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
+# base_url = "http://airedale-native-chicken.ngrok-free.app/v1"  # Seems like OpenLLM server only support SKD is openai==0.28  ag2==0.1.14 . refer: https://colab.research.google.com/drive/1GKlfU7Fjq30oQPirHvCcQy_e_B8vNEDs?usp=sharing
 # api_model="TinyLlama--TinyLlama-1.1B-Chat-v1.0"
 base_url = "http://192.168.0.232:1234/v1"  #Sidan's Server Mistral-7B-Instruct-v0.2-GGUF/mistral-7b-instruct-v0.2.Q6_K.gguf
 api_model="Mistral-7B-Instruct-v0.2-GGUF/mistral-7b-instruct-v0.2.Q6_K.gguf"
@@ -37,7 +37,7 @@ default_global_llm_config_list = [
 
 def run_agentchat_multiagents_groupchat():
 #    try:
-        #Base on openai==0.28  pyautogen==0.1.14 ,If you want to use your own LLM,you must be override your openai.api_base and openai.api_key for autogen, otherwise won't be work.
+        #Base on openai==0.28  ag2==0.1.14 ,If you want to use your own LLM,you must be override your openai.api_base and openai.api_key for autogen, otherwise won't be work.
         openai.api_key = api_key  # supply your API key however you choose
         openai.api_base= base_url # supply your api base URL If you have your own LLM
         openai.model = api_model  # supply your api base URL If you have your own model (PS:openLLM required change the model,LM Studio doesn't care about model)
